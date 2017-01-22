@@ -93,6 +93,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Local\AppSettings.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -146,9 +150,6 @@
     </Compile>
     <Compile Include="UserControls\Progress\ProgressProcessingRing.xaml.cs">
       <DependentUpon>ProgressProcessingRing.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\Progress\ProgressRing.xaml.cs">
-      <DependentUpon>ProgressRing.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Toolbox\OkCancel.xaml.cs">
       <DependentUpon>OkCancel.xaml</DependentUpon>
@@ -232,10 +233,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Progress\ProgressProcessingRing.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\Progress\ProgressRing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

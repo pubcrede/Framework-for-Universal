@@ -147,6 +147,7 @@ namespace Framework.Pages
         {
             var newComponent = System.Windows.Application.LoadComponent(CustomerDelete.Uri);
             var navService = NavigationService.GetNavigationService(this);
+            var returnValue = new ProcessResult();
 
             if (newComponent is ReadOnlyPage)
             {

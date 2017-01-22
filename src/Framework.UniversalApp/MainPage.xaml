@@ -9,7 +9,7 @@
 
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Vertical" Background="{StaticResource ContentBackgroundBrush}">
-            <TextBox Text="Your new WPF Desktop App + Reusable Framework powered by the Genesys Framework is ready!" Style="{StaticResource TextBoxSubTitle}" Margin="5,10,0,10" />
+            <TextBox Text="Your new Universal Mobile App + Reusable Framework powered by the Genesys Framework is ready!" Style="{StaticResource TextBoxSubTitle}" Margin="5,10,0,10" />
             <TextBox Text="Step 1: Publish the Framework.Database (SSDT) project to your SQL Server by:" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Margin="38,0,0,0">
                 <TextBox Text="I. Double-click Framework.Database\Publish\PublishToDev.publish.xml to bring up the Publish form" Style="{StaticResource TextBoxBody}" />

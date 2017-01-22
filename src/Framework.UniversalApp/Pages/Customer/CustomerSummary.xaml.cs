@@ -100,7 +100,7 @@ namespace Framework.Pages
             this.OkCancel.StartProcessing("Loading data...");
             CustomerModel model = await MyViewModel.GetByID(e.NewModelData.ToString().TryParseInt32());
             BindModel(model);
-            this.OkCancel.CancelProcessing();
+            this.OkCancel.StopProcessing("");
         }
 
         /// <summary>
@@ -124,12 +124,9 @@ namespace Framework.Pages
         /// </summary>
         public override async Task<ProcessResult> Process(object sender, RoutedEventArgs e)
         {
-            var returnValue = new ProcessResult();
-
             await Task.Delay(1);
             MyViewModel.Navigate(typeof(CustomerEdit), MyViewModel.Model.ID);
-
-            return returnValue;
+            return new ProcessResult();
         }
 
         /// <summary>

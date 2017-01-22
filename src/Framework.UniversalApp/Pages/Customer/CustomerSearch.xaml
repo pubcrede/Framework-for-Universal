@@ -23,26 +23,26 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <TextBlock Text="ID" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="0" />
+            <TextBlock Text="ID" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="0" />
             <TextBox x:Name="TextID" Grid.Column="1" Grid.Row="0" IsEnabled="False"/>
-            <TextBlock Text="First Name" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="2" />
+            <TextBlock Text="First Name" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="2" />
             <TextBox x:Name="TextFirstName" Grid.Column="1" Grid.Row="2" />
-            <TextBlock Text="Last Name" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="3" />
+            <TextBlock Text="Last Name" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="3" />
             <TextBox x:Name="TextLastName" Grid.Column="1" Grid.Row="3" />
-            <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Search" TextProcessing="Searching" TextSuccessful="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" />
+            <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Search" TextProcessingMessage="Searching" TextResultMessage="Matches listed below" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" />
         </Grid>
         <StackPanel x:Name="StackResults" Visibility="Collapsed">
-            <Grid>
+            <Grid Background="{StaticResource HeaderBackgroundBrush}" Margin="0,10,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="150"/>
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="ID" Grid.Column="0" />
-                <TextBlock Text="FirstName" Grid.Column="1" />
-                <TextBlock Text="LastName" Grid.Column="2" />
+                <TextBlock Text="ID" Style="{StaticResource BodyTextBlockStyle}" Foreground="{StaticResource HeaderForegroundBrush}" Margin="10,7,0,7" Grid.Column="0" />
+                <TextBlock Text="FirstName" Style="{StaticResource BodyTextBlockStyle}" Foreground="{StaticResource HeaderForegroundBrush}" Margin="0,7,0,7" Grid.Column="1" />
+                <TextBlock Text="LastName" Style="{StaticResource BodyTextBlockStyle}" Foreground="{StaticResource HeaderForegroundBrush}" Margin="0,7,0,7" Grid.Column="2" />
             </Grid>
-            <ListView x:Name="ListResults" ItemsSource="{Binding Results}" MinHeight="75" MaxHeight="400" Margin="0,10,0,0" VerticalAlignment="Top">
+            <ListView x:Name="ListResults" IsItemClickEnabled="True" ItemsSource="{Binding Results}" ItemClick="ListView_ItemClick" MinHeight="75" MaxHeight="400" Margin="0,10,0,0" VerticalAlignment="Top">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>

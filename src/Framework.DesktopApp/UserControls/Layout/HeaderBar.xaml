@@ -8,6 +8,7 @@
     mc:Ignorable="d">
 
     <StackPanel x:Name="StackHeaderBar" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{StaticResource HeaderBackgroundBrush}">
+        <Button x:Name="ButtonGoBack" Click="GoBack" AutomationProperties.Name="" Visibility="Collapsed" IsEnabled="{Binding Frame.CanGoBack, ElementName=RootPage}" Style="{StaticResource GlyphiconGoBack}" />
         <TextBlock x:Name="TextPageHeader" Text="{Binding Title}" Style="{StaticResource HeaderBarTextStyle}" />
     </StackPanel>
 </uc:ReadOnlyControl>

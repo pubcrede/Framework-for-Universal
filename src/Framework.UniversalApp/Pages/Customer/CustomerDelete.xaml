@@ -25,19 +25,19 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <TextBlock Text="ID" Style="{StaticResource BaseTextBlockStyle}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="0" />
-            <TextBlock x:Name="TextID" Style="{StaticResource BodyTextBlockStyle}" Margin="10,5,0,0" Grid.Column="1" Grid.Row="0"/>
-            <TextBlock Text="Key" Style="{StaticResource BaseTextBlockStyle}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="1" />
-            <TextBlock x:Name="TextKey" Style="{StaticResource BodyTextBlockStyle}" Margin="10,5,0,0" Grid.Column="1" Grid.Row="1" />
-            <TextBlock Text="First Name" Style="{StaticResource BaseTextBlockStyle}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="2" />
-            <TextBlock x:Name="TextFirstName" Style="{StaticResource BodyTextBlockStyle}" Margin="10,5,0,0" Grid.Column="1" Grid.Row="2" />
-            <TextBlock Text="Last Name" Style="{StaticResource BaseTextBlockStyle}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="3" />
-            <TextBlock x:Name="TextLastName" Style="{StaticResource BodyTextBlockStyle}" Margin="10,5,0,0" Grid.Column="1" Grid.Row="3" />
-            <TextBlock Text="BirthDate" Style="{StaticResource BaseTextBlockStyle}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="4" />
-            <TextBlock x:Name="TextBirthDate" Style="{StaticResource BodyTextBlockStyle}" Margin="10,5,0,0" Grid.Column="1" Grid.Row="4" />
-            <TextBlock Text="Gender" Style="{StaticResource BaseTextBlockStyle}" Margin="0,5,0,0" Grid.Column="0" Grid.Row="5" />
-            <TextBlock x:Name="TextGender" Style="{StaticResource BodyTextBlockStyle}" Margin="10,5,0,0" Grid.Column="1" Grid.Row="5" />
-            <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Delete" TextProcessing="Deleting" TextSuccessful="Customer record deleted" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" />
+            <TextBlock Text="ID" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="0" />
+            <TextBlock x:Name="TextID" Style="{StaticResource FormTextBlockStyle}" Margin="10,0,0,0" Grid.Column="1" Grid.Row="0"/>
+            <TextBlock Text="Key" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="1" />
+            <TextBlock x:Name="TextKey" Style="{StaticResource FormTextBlockStyle}" Margin="10,0,0,0" Grid.Column="1" Grid.Row="1" />
+            <TextBlock Text="First Name" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="2" />
+            <TextBlock x:Name="TextFirstName" Style="{StaticResource FormTextBlockStyle}" Margin="10,0,0,0" Grid.Column="1" Grid.Row="2" />
+            <TextBlock Text="Last Name" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="3" />
+            <TextBlock x:Name="TextLastName" Style="{StaticResource FormTextBlockStyle}" Margin="10,0,0,0" Grid.Column="1" Grid.Row="3" />
+            <TextBlock Text="BirthDate" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="4" />
+            <TextBlock x:Name="TextBirthDate" Style="{StaticResource FormTextBlockStyle}" Margin="10,0,0,0" Grid.Column="1" Grid.Row="4" />
+            <TextBlock Text="Gender" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="5" />
+            <TextBlock x:Name="TextGender" Style="{StaticResource FormTextBlockStyle}" Margin="10,0,0,0" Grid.Column="1" Grid.Row="5" />
+            <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Delete" TextProcessingMessage="Deleting" TextResultMessage="Customer record deleted" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" />
         </Grid>
     </StackPanel>
 </p:SaveablePage>

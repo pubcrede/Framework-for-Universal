@@ -25,18 +25,18 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock Text="ID" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="0" />
+        <TextBlock Text="ID" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="0" />
         <TextBox x:Name="TextID" Text="-" Grid.Column="1" Grid.Row="0" IsEnabled="False"/>
-        <TextBlock Text="Key" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="1" />
+        <TextBlock Text="Key" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="1" />
         <TextBox x:Name="TextKey" Text="-" Grid.Column="1" Grid.Row="1" IsEnabled="False" />
-        <TextBlock Text="First Name" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="2" />
+        <TextBlock Text="First Name" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="2" />
         <TextBox x:Name="TextFirstName" Grid.Column="1" Grid.Row="2" />
-        <TextBlock Text="Last Name" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="3" />
+        <TextBlock Text="Last Name" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="3" />
         <TextBox x:Name="TextLastName" Grid.Column="1" Grid.Row="3" />
-        <TextBlock Text="BirthDate" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="4" />
+        <TextBlock Text="BirthDate" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="4" />
         <DatePicker x:Name="TextBirthDate" Grid.Column="1" Grid.Row="4" />
-        <TextBlock Text="Gender" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="5" />
+        <TextBlock Text="Gender" Style="{StaticResource FormTextBlockStyle}" Grid.Column="0" Grid.Row="5" />
         <ComboBox x:Name="DropDownGender" Grid.Column="1" Grid.Row="5" />
-        <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Save" TextProcessing="Saving"  TextSuccessful="Customer changes saved" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" />
+        <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Save" TextProcessingMessage="Saving"  TextResultMessage="Customer changes saved" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" />
     </Grid>
 </p:SaveablePage>

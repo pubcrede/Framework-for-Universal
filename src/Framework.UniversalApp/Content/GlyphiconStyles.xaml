@@ -2,8 +2,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <SolidColorBrush x:Key="GlyphiconBackgroundColor" Color="Transparent"/>
-    <SolidColorBrush x:Key="GlyphiconTextColor" Color="LightBlue"/>
+    <SolidColorBrush x:Key="GlyphiconBackgroundColor" Color="{StaticResource ThemeColorTransparent}"/>
+    <SolidColorBrush x:Key="GlyphiconTextColor" Color="{StaticResource ThemeColorDark}" />
     <Style x:Key="GlyphiconText" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{StaticResource GlyphiconBackgroundColor}"/>
         <Setter Property="FontFamily" Value="Segoe UI"/>

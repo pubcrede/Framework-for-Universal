@@ -90,7 +90,7 @@ namespace Framework.Pages
         /// <param name="e">Event arguments</param>
         protected override async void Page_ModelReceived(object sender, NewModelReceivedEventArgs e)
         {
-            this.OkCancel.StartProcessing("Working...");
+            this.OkCancel.StartProcessing("Loading data...");
             CustomerModel model = await MyViewModel.GetByID(e.NewModelData.ToString().TryParseInt32());
             BindModel(model);
             this.OkCancel.CancelProcessing();

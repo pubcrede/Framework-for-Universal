@@ -37,7 +37,7 @@
                     <TextBox x:Name="TextFirstName" Grid.Column="1" Grid.Row="2" />
                     <TextBlock Text="Last Name" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="3" />
                     <TextBox x:Name="TextLastName" Grid.Column="1" Grid.Row="3" />
-                    <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Search" TextProcessing="Searching" TextSuccessful="" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" />
+                    <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Search" TextProcessingMessage="Searching" TextResultMessage="Matches listed below" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" />
                 </Grid>
                 <StackPanel x:Name="StackResults" Visibility="Collapsed">
                     <Grid>

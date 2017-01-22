@@ -57,7 +57,7 @@ namespace Framework.UserControls
         public new Brush Foreground
         {
             get { return TextPageHeader.Foreground; }
-            set { this.TextPageHeader.Foreground = value; }
+            set { TextPageHeader.Foreground = value; }
         }
 
         /// <summary>
@@ -66,6 +66,7 @@ namespace Framework.UserControls
         public HeaderBar()
         {
             InitializeComponent();
+            GotFocus += TopBarControl_GotFocus;
         }
 
         /// <summary>
@@ -74,7 +75,7 @@ namespace Framework.UserControls
         /// <typeparam name="TModel"></typeparam>
         /// <param name="modelData"></param>
         protected override void BindModelData(object modelData)
-        {
+        {            
         }
 
         /// <summary>
@@ -86,5 +87,36 @@ namespace Framework.UserControls
         {
             base.Partial_Loaded(sender, e);
         }
+
+        /// <summary>
+        /// Configures self based on RootFrame.CanGoBack
+        /// </summary>
+        /// <param name="sender">Event sender</param>
+        /// <param name="e">Event args</param>
+        private void TopBarControl_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (MyApplication.RootFrame.CanGoBack == false)
+            {
+                ButtonGoBack.IsEnabled = false;
+            } else
+            {
+                ButtonGoBack.IsEnabled = true;
+                ButtonGoBack.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
+        }
+
+        /// <summary>
+        /// Invoked when the page's back button is pressed.
+        /// </summary>
+        /// <param name="sender">The back button instance.</param>
+        /// <param name="e">Event data that describes how the back button was clicked.</param>
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (MyApplication.RootFrame.CanGoBack)
+            {
+                MyApplication.RootFrame.GoBack();
+            }
+        }
     }
+
 }

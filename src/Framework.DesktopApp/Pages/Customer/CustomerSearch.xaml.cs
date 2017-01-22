@@ -129,11 +129,11 @@ namespace Framework.Pages
             this.ListResults.ItemsSource = MyViewModel.Model.Results;
             if (this.MyViewModel.Model.Results.Count > 0)
             {
-                OkCancel.TextSuccessful = "Customer matches listed below";
+                OkCancel.TextResultMessage = "Customer matches listed below";
                 this.StackResults.Visibility = Visibility.Visible;
             } else
             {
-                OkCancel.TextSuccessful = "No results found";
+                OkCancel.TextResultMessage = "No results found";
                 this.StackResults.Visibility = Visibility.Collapsed;
             }
             returnValue.ReturnData = this.MyViewModel.Model.Serialize();

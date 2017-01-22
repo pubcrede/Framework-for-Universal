@@ -44,7 +44,7 @@
                 <DatePicker x:Name="TextBirthDate" SelectedDateFormat="Short" Grid.Column="1" Grid.Row="4" />
                 <TextBlock Text="Gender" Style="{StaticResource BodyTextBlockStyle}" Grid.Column="0" Grid.Row="5" />
                 <ComboBox x:Name="DropDownGender" Grid.Column="1" Grid.Row="5" />
-                <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Save" TextProcessing="Saving"  TextSuccessful="Customer changes saved" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" />
+                <uc:OkCancel x:Name="ButtonOkCancel" ButtonOKContent="Save" TextProcessingMessage="Saving"  TextResultMessage="Customer changes saved" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" />
             </Grid>
         </t:GenericLayout.ContentBody>
     </t:GenericLayout>

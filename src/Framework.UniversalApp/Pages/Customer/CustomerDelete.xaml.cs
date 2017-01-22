@@ -88,11 +88,10 @@ namespace Framework.Pages
         /// <param name="e">Event arguments</param>
         protected override async void Page_ModelReceived(object sender, NewModelReceivedEventArgs e)
         {
-            this.OkCancel.StartProcessing("Loading data...");
-            if (e.NewModelData != null) e.NewModelData = TypeExtension.DefaultInteger;
+            OkCancel.StartProcessing("Loading data...");
             CustomerModel model = await MyViewModel.GetByID(e.NewModelData.ToString().TryParseInt32());
             BindModel(model);
-            this.OkCancel.CancelProcessing();
+            OkCancel.CancelProcessing();
         }
 
         /// <summary>
@@ -108,7 +107,7 @@ namespace Framework.Pages
             SetBinding(ref this.TextFirstName, MyViewModel.Model.FirstName, "FirstName");
             SetBinding(ref this.TextLastName, MyViewModel.Model.LastName, "LastName");
             SetBinding(ref this.TextBirthDate, MyViewModel.Model.BirthDate.ToString(), "BirthDate");
-            this.TextGender.Text = MyViewModel.Model.GenderSelections().Find(x => x.Key == MyViewModel.Model.GenderID).Value;
+            TextGender.Text = MyViewModel.Model.GenderSelections().Find(x => x.Key == MyViewModel.Model.GenderID).Value;
         }
 
         /// <summary>
@@ -126,12 +125,11 @@ namespace Framework.Pages
         /// </summary>
         public override async Task<ProcessResult> Process(object sender, RoutedEventArgs e)
         {
-
             var returnValue = new ProcessResult();
 
             MyViewModel.Model = await MyViewModel.Delete(MyViewModel.Model.ID);
-            DataContext = MyViewModel.Model;
-            if (MyViewModel.Model.ID == TypeExtension.DefaultInteger)
+            BindModel(MyViewModel.Model);
+            if (MyViewModel.Model.ID != TypeExtension.DefaultInteger)
             {
                 returnValue.FailedRules.Add("1026", "Failed to delete");
             }

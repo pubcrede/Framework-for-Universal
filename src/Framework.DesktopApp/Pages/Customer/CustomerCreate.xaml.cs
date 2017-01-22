@@ -127,7 +127,7 @@ namespace Framework.Pages
             var returnValue = new ProcessResult();
 
             MyViewModel.Model = await MyViewModel.Create(MyViewModel.Model);
-            DataContext = MyViewModel.Model;
+            BindModel(MyViewModel.Model);
             if (MyViewModel.Model.ID == TypeExtension.DefaultInteger)
             {
                 returnValue.FailedRules.Add("1025", "Failed to create");

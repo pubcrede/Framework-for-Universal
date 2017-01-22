@@ -26,6 +26,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
 namespace Framework.Pages
@@ -69,7 +70,7 @@ namespace Framework.Pages
             TextID.KeyDown += MapEnterKey;
             TextFirstName.KeyDown += MapEnterKey;
             TextLastName.KeyDown += MapEnterKey;
-            ListResults.PointerReleased += ListView_PointerReleased;
+            //ListResults.ItemClick += ListView_ItemClick;
         }
 
         /// <summary>
@@ -77,9 +78,9 @@ namespace Framework.Pages
         /// </summary>
         /// <param name="sender">Event sender</param>
         /// <param name="e">Event args</param>
-        private void ListView_PointerReleased(object sender, PointerRoutedEventArgs e)
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int id = ListResults.SelectedItem.DirectCastSafe<CustomerModel>().ID;
+            int id = e.ClickedItem.DirectCastSafe<CustomerModel>().ID;
             MyViewModel.Navigate(typeof(CustomerSummary), id);
         }
 
@@ -129,11 +130,11 @@ namespace Framework.Pages
             this.ListResults.ItemsSource = MyViewModel.Model.Results;
             if (this.MyViewModel.Model.Results.Count > 0)
             {
-                OkCancel.TextSuccessful = "Customer matches listed below";
+                OkCancel.TextResultMessage = "Customer matches listed below";
                 this.StackResults.Visibility = Visibility.Visible;
             } else
             {
-                OkCancel.TextSuccessful = "No results found";
+                OkCancel.TextResultMessage = "No results found";
                 this.StackResults.Visibility = Visibility.Collapsed;
             }
             returnValue.ReturnData = this.MyViewModel.Model.Serialize();

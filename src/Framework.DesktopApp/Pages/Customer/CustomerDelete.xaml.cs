@@ -90,7 +90,6 @@ namespace Framework.Pages
         protected override async void Page_ModelReceived(object sender, NewModelReceivedEventArgs e)
         {
             this.OkCancel.StartProcessing("Loading data...");
-            if (e.NewModelData != null) e.NewModelData = TypeExtension.DefaultInteger;
             CustomerModel model = await MyViewModel.GetByID(e.NewModelData.ToString().TryParseInt32());
             BindModel(model);
             this.OkCancel.CancelProcessing();
@@ -127,11 +126,10 @@ namespace Framework.Pages
         /// </summary>
         public override async Task<ProcessResult> Process(object sender, RoutedEventArgs e)
         {
-
             var returnValue = new ProcessResult();
 
             MyViewModel.Model = await MyViewModel.Delete(MyViewModel.Model.ID);
-            DataContext = MyViewModel.Model;
+            BindModel(MyViewModel.Model);
             if (MyViewModel.Model.ID == TypeExtension.DefaultInteger)
             {
                 returnValue.FailedRules.Add("1026", "Failed to delete");

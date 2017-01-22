@@ -7,13 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Vertical" Margin="0,5,0,0">
-        <StackPanel Orientation="Horizontal">
-            <uc:ProgressRingControl x:Name="ProgressRingIndeterminate"/>
-            <TextBlock x:Name="TextProgressMessage" TextWrapping="Wrap" Style="{StaticResource ProgressMessageStyle}" />
+    <StackPanel x:Name="PanelRoot" Visibility="Collapsed" Orientation="Vertical" Margin="0,5,0,0">
+        <StackPanel x:Name="PanelProcessing" Orientation="Horizontal">
+            <ProgressRing x:Name="ProgressRingIndeterminate" IsActive="True" Style="{StaticResource GenesysProgressRing}" Margin="0,0,0,5"/>
+            <TextBlock x:Name="TextProcessing" TextWrapping="Wrap" Style="{StaticResource ProgressMessageStyle}" />
         </StackPanel>
-        <TextBlock x:Name="TextCancelMessage" Visibility="Collapsed" TextWrapping="Wrap" Style="{StaticResource ErrorMessageStyle}" />
-        <TextBlock x:Name="TextErrorMessage" Visibility="Collapsed" TextWrapping="Wrap" Style="{StaticResource ErrorMessageStyle}" />
-        <TextBlock x:Name="TextSuccessMessage" Visibility="Collapsed" TextWrapping="Wrap" Style="{StaticResource SuccessMessageStyle}" />
+        <TextBlock x:Name="TextResult" Visibility="Collapsed" TextWrapping="Wrap" Style="{StaticResource ProgressMessageStyle}" />
     </StackPanel>
 </uc:ReadOnlyControl>
