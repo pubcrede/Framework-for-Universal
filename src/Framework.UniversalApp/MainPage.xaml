@@ -18,13 +18,13 @@
             </StackPanel>
             <TextBox Text="Step 2: Set the Framework.Entity (EF) connection strings to your SQL Server by:" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Orientation="Vertical" Margin="38,0,0,0">
-                <TextBox Text="I. Open Framework.DesktopApp\Local\ConnectionStrings.config" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text="I. Open Framework.UniversalApp\App_Data\ConnectionStrings.config" Style="{StaticResource TextBoxBody}" />
                 <TextBox Text="II. Change DatabaseServer.dev.getframework.local to your SQL Server machine name" Style="{StaticResource TextBoxBody}" />
                 <TextBox Text="III. For SQL Authentication, change Integrated Security=true to user id=USER; password=PASS;" Style="{StaticResource TextBoxBody}" />
             </StackPanel>
-            <TextBox Text="Step 3: Run the Framework.DesktopApp project!" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
+            <TextBox Text="Step 3: Run the Framework.UniversalApp project!" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Margin="38,0,0,10">
-                <TextBox Text="I. Right-cick the Framework.DesktopApp project and select Set as Startup Project" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text="I. Right-cick the Framework.UniversalApp project and select Set as Startup Project" Style="{StaticResource TextBoxBody}" />
                 <TextBox Text="II. Press F5 to run" Style="{StaticResource TextBoxBody}" />
                 <TextBox Text="III. Click the Search link at the top, enter 'i' for First Name, and click Search to see records with 'i'" Style="{StaticResource TextBoxBody}" />
             </StackPanel>
@@ -44,7 +44,7 @@
                 <TextBox Text="Genesys Framework Home: http://www.GetFramework.com" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
                 <TextBox Text="Genesys Framework Docs: http://docs.getframework.com" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
                 <TextBox Text="Genesys in Visual Studio: http://marketplace.visualstudio.com" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
-                <TextBox Text="Genesys on GitHub: http://github.com/GenesysSource" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
+                <TextBox Text="Genesys on GitHub: http://www.github.com/GenesysSource" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
             </StackPanel>
         </Grid>
     </StackPanel>

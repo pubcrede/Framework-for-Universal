@@ -93,7 +93,7 @@ namespace Framework.Applications
         private async Task LoadConfigAsync()
         {
             var localFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-            localFolder = await localFolder.GetFolderAsync("Local");
+            localFolder = await localFolder.GetFolderAsync("App_Data");
             var appSettingsFile = await localFolder.GetFileAsync("AppSettings.config");
             var appSettingsStream = await Windows.Storage.FileIO.ReadTextAsync(appSettingsFile);
             var connectStringsFile = await localFolder.GetFileAsync("ConnectionStrings.config");
