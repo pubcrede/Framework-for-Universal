@@ -19,7 +19,7 @@
             <TextBox Text="Step 2: Set the Framework.Entity (EF) connection strings to your SQL Server by:" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Orientation="Vertical" Margin="38,0,0,0">
                 <TextBox Text="I. Open Framework.UniversalApp\App_Data\ConnectionStrings.config" Style="{StaticResource TextBoxBody}" />
-                <TextBox Text="II. Change DatabaseServer.dev.getframework.local to your SQL Server machine name" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text="II. Change DatabaseServer.dev.GetFramework.com to your SQL Server machine name" Style="{StaticResource TextBoxBody}" />
                 <TextBox Text="III. For SQL Authentication, change Integrated Security=true to user id=USER; password=PASS;" Style="{StaticResource TextBoxBody}" />
             </StackPanel>
             <TextBox Text="Step 3: Run the Framework.UniversalApp project!" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
@@ -36,13 +36,12 @@
             </Grid.ColumnDefinitions>
             <StackPanel Background="{StaticResource ContentBackgroundBrush}" Orientation="Vertical" Margin="0,10,5,0" Grid.Column="0">
                 <TextBox Text="What is the Genesys Framework?" Style="{StaticResource TextBoxSubTitle}" Margin="5,0,0,0" />
-                <TextBox Text="Genesys Framework helps you create a reusable framework for your business entity objects and view-model objects ...allowing your framework objects to work in MVC, WebAPI and Cross-Platform Universal Apps." Style="{StaticResource TextBoxBody}" Margin="10,5,0,0" HorizontalAlignment="Left" MaxWidth="330" TextWrapping="Wrap" />
-                <TextBox Text="Works with your existing .Net applications and SQL Server databases, allowing you to incrementally upgrade one object, one page at a time." Style="{StaticResource TextBoxBody}" Margin="10,5,0,10" HorizontalAlignment="Left" MaxWidth="330" TextWrapping="Wrap" />
+                <TextBox Text="Genesys Framework is a full-stack .NET solution with Data Tier, Middle Tier and Presentation Tier projects that centralize your business objects in one reusable solution.     " Style="{StaticResource TextBoxBody}" Margin="10,5,0,0" HorizontalAlignment="Left" MaxWidth="330" TextWrapping="Wrap" />
+                <TextBox Text="Your framework C# objects then can be used in any app type that you may need - in a web site, in a web service, in a mobile app and in the database." Style="{StaticResource TextBoxBody}" Margin="10,5,0,10" HorizontalAlignment="Left" MaxWidth="330" TextWrapping="Wrap" />
             </StackPanel>
             <StackPanel Background="{StaticResource ContentBackgroundBrush}" Orientation="Vertical" Margin="0,10,5,0" Grid.Column="1">
                 <TextBox Text="Other areas of interest:" Style="{StaticResource TextBoxSubTitle}" Margin="5,5,0,0" />
-                <TextBox Text="Genesys Framework Home: http://www.GetFramework.com" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
-                <TextBox Text="Genesys Framework Docs: http://docs.getframework.com" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
+                <TextBox Text="Visit us at: http://www.GetFramework.com" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
                 <TextBox Text="Genesys in Visual Studio: http://marketplace.visualstudio.com" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
                 <TextBox Text="Genesys on GitHub: http://www.github.com/GenesysSource" Style="{StaticResource TextBoxBody}" Margin="10,3,0,0" />
             </StackPanel>

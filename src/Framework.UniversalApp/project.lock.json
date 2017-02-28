@@ -3,7 +3,7 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
-      "Genesys.Extensions.Universal/3.0.12-rc2": {
+      "Genesys.Extensions.Universal/3.17.1": {
         "compile": {
           "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll": {},
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
@@ -13,7 +13,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
         }
       },
-      "Genesys.Foundation.Interfaces/3.0.12-rc2": {
+      "Genesys.Foundation.Interfaces/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -24,7 +24,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.dll": {}
         }
       },
-      "Genesys.Foundation.Models/3.0.12-rc2": {
+      "Genesys.Foundation.Models/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -1812,7 +1812,7 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
-      "Genesys.Extensions.Universal/3.0.12-rc2": {
+      "Genesys.Extensions.Universal/3.17.1": {
         "compile": {
           "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll": {},
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
@@ -1822,7 +1822,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
         }
       },
-      "Genesys.Foundation.Interfaces/3.0.12-rc2": {
+      "Genesys.Foundation.Interfaces/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -1833,7 +1833,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.dll": {}
         }
       },
-      "Genesys.Foundation.Models/3.0.12-rc2": {
+      "Genesys.Foundation.Models/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -3482,7 +3482,7 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
-      "Genesys.Extensions.Universal/3.0.12-rc2": {
+      "Genesys.Extensions.Universal/3.17.1": {
         "compile": {
           "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll": {},
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
@@ -3492,7 +3492,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
         }
       },
-      "Genesys.Foundation.Interfaces/3.0.12-rc2": {
+      "Genesys.Foundation.Interfaces/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -3503,7 +3503,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.dll": {}
         }
       },
-      "Genesys.Foundation.Models/3.0.12-rc2": {
+      "Genesys.Foundation.Models/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -5110,7 +5110,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
-      "Genesys.Extensions.Universal/3.0.12-rc2": {
+      "Genesys.Extensions.Universal/3.17.1": {
         "compile": {
           "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll": {},
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
@@ -5120,7 +5120,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
         }
       },
-      "Genesys.Foundation.Interfaces/3.0.12-rc2": {
+      "Genesys.Foundation.Interfaces/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -5131,7 +5131,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.dll": {}
         }
       },
-      "Genesys.Foundation.Models/3.0.12-rc2": {
+      "Genesys.Foundation.Models/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -6788,7 +6788,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
-      "Genesys.Extensions.Universal/3.0.12-rc2": {
+      "Genesys.Extensions.Universal/3.17.1": {
         "compile": {
           "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll": {},
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
@@ -6798,7 +6798,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
         }
       },
-      "Genesys.Foundation.Interfaces/3.0.12-rc2": {
+      "Genesys.Foundation.Interfaces/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -6809,7 +6809,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.dll": {}
         }
       },
-      "Genesys.Foundation.Models/3.0.12-rc2": {
+      "Genesys.Foundation.Models/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -8416,7 +8416,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
-      "Genesys.Extensions.Universal/3.0.12-rc2": {
+      "Genesys.Extensions.Universal/3.17.1": {
         "compile": {
           "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll": {},
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
@@ -8426,7 +8426,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
         }
       },
-      "Genesys.Foundation.Interfaces/3.0.12-rc2": {
+      "Genesys.Foundation.Interfaces/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -8437,7 +8437,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.dll": {}
         }
       },
-      "Genesys.Foundation.Models/3.0.12-rc2": {
+      "Genesys.Foundation.Models/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -10094,7 +10094,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
-      "Genesys.Extensions.Universal/3.0.12-rc2": {
+      "Genesys.Extensions.Universal/3.17.1": {
         "compile": {
           "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll": {},
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
@@ -10104,7 +10104,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.dll": {}
         }
       },
-      "Genesys.Foundation.Interfaces/3.0.12-rc2": {
+      "Genesys.Foundation.Interfaces/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -10115,7 +10115,7 @@
           "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.dll": {}
         }
       },
-      "Genesys.Foundation.Models/3.0.12-rc2": {
+      "Genesys.Foundation.Models/3.17.1": {
         "dependencies": {
           "Genesys.Extensions.Universal": "3.0.0"
         },
@@ -11723,11 +11723,12 @@
     }
   },
   "libraries": {
-    "Genesys.Extensions.Universal/3.0.12-rc2": {
-      "sha512": "8kmJfy/po52/HHJoe0Vwzx54xKhLxxZZJu310timTM5PPQQTtule+1stEAhuHHpMVpXigMYw5gnQOOQx2QlW6A==",
+    "Genesys.Extensions.Universal/3.17.1": {
+      "sha512": "xjRgPK2XuvkVgYNVhCqAaEzcfFFRUmdNSCUw+yc0tqSHvT0u0ozRUBS8CXAEy2Bt7KnFBF+gT3OMjQ5Z1azWWQ==",
       "type": "package",
+      "path": "Genesys.Extensions.Universal/3.17.1",
       "files": [
-        "Genesys.Extensions.Universal.3.0.12-rc2.nupkg.sha512",
+        "Genesys.Extensions.Universal.3.17.1.nupkg.sha512",
         "Genesys.Extensions.Universal.nuspec",
         "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.dll",
         "lib/portable-net451+win81+wpa81/Genesys.Extensions.Universal.pdb",
@@ -11737,11 +11738,12 @@
         "lib/portable-net451+win81+wpa81/Genesys.Extras.Universal.xml"
       ]
     },
-    "Genesys.Foundation.Interfaces/3.0.12-rc2": {
-      "sha512": "zjuOFLalKkBUUZe0xcXt2XfIaWccO3fRitFuW2MN0wEIdD8pVfwX9yrvSzV0betqs46TrGdYonkbEvpQiYhTew==",
+    "Genesys.Foundation.Interfaces/3.17.1": {
+      "sha512": "JwQuF61FcVUdZlDU/pHqScqKtU0CJKVwYkBAzy7NO7TFs3zIgaC54M6I/a87iYruyJPQ/ethYyCR4WXEbsEjIg==",
       "type": "package",
+      "path": "Genesys.Foundation.Interfaces/3.17.1",
       "files": [
-        "Genesys.Foundation.Interfaces.3.0.12-rc2.nupkg.sha512",
+        "Genesys.Foundation.Interfaces.3.17.1.nupkg.sha512",
         "Genesys.Foundation.Interfaces.nuspec",
         "lib/net46/Genesys.Foundation.Interfaces.dll",
         "lib/net46/Genesys.Foundation.Interfaces.pdb",
@@ -11751,11 +11753,12 @@
         "lib/portable-net451+win81+wpa81/Genesys.Foundation.Interfaces.xml"
       ]
     },
-    "Genesys.Foundation.Models/3.0.12-rc2": {
-      "sha512": "1Glzay/yPBuAL3qlVUkk+du9u6XCckbXc3rXGD1QneqVwnu97l3v85rxFTOdxAjmU+pAyXIiYtno8lzD4q3RPA==",
+    "Genesys.Foundation.Models/3.17.1": {
+      "sha512": "5MX+TRJMhY4pFfoAiLMw7M5Fx5nZSjLhrcXc+a/O7ABtsm6sj/bdAHmHjqnwxX+GDF5ZgffLlU9InstkRjYRJA==",
       "type": "package",
+      "path": "Genesys.Foundation.Models/3.17.1",
       "files": [
-        "Genesys.Foundation.Models.3.0.12-rc2.nupkg.sha512",
+        "Genesys.Foundation.Models.3.17.1.nupkg.sha512",
         "Genesys.Foundation.Models.nuspec",
         "lib/net46/Genesys.Foundation.Models.dll",
         "lib/net46/Genesys.Foundation.Models.pdb",
@@ -15034,9 +15037,9 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Genesys.Extensions.Universal >= 3.0.12-rc2",
-      "Genesys.Foundation.Interfaces >= 3.0.12-rc2",
-      "Genesys.Foundation.Models >= 3.0.12-rc2",
+      "Genesys.Extensions.Universal >= 3.17.1",
+      "Genesys.Foundation.Interfaces >= 3.17.1",
+      "Genesys.Foundation.Models >= 3.17.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.1.0"
     ],
     "UAP,Version=v10.0": []
