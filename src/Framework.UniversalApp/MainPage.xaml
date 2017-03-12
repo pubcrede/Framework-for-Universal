@@ -9,7 +9,7 @@
 
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Vertical" Background="{StaticResource ContentBackgroundBrush}">
-            <TextBox Text="Your new Universal Mobile App + Reusable Framework powered by the Genesys Framework is ready!" Style="{StaticResource TextBoxSubTitle}" Margin="5,10,0,10" />
+            <TextBox Text="Your new Universal Mobile App + Reusable Framework powered by Genesys Source is ready!" Style="{StaticResource TextBoxSubTitle}" Margin="5,10,0,10" />
             <TextBox Text="Step 1: Publish the Framework.Database (SSDT) project to your SQL Server by:" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Margin="38,0,0,0">
                 <TextBox Text="I. Double-click Framework.Database\Publish\PublishToDev.publish.xml to bring up the Publish form" Style="{StaticResource TextBoxBody}" />
@@ -35,8 +35,8 @@
                 <ColumnDefinition Width="50*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Background="{StaticResource ContentBackgroundBrush}" Orientation="Vertical" Margin="0,10,5,0" Grid.Column="0">
-                <TextBox Text="What is the Genesys Framework?" Style="{StaticResource TextBoxSubTitle}" Margin="5,0,0,0" />
-                <TextBox Text="Genesys Framework is a full-stack .NET solution with Data Tier, Middle Tier and Presentation Tier projects that centralize your business objects in one reusable solution.     " Style="{StaticResource TextBoxBody}" Margin="10,5,0,0" HorizontalAlignment="Left" MaxWidth="330" TextWrapping="Wrap" />
+                <TextBox Text="What is Genesys Source?" Style="{StaticResource TextBoxSubTitle}" Margin="5,0,0,0" />
+                <TextBox Text="Genesys Source is a full-stack .NET solution with Data Tier, Middle Tier and Presentation Tier projects that centralize your business objects in one reusable solution.     " Style="{StaticResource TextBoxBody}" Margin="10,5,0,0" HorizontalAlignment="Left" MaxWidth="330" TextWrapping="Wrap" />
                 <TextBox Text="Your framework C# objects then can be used in any app type that you may need - in a web site, in a web service, in a mobile app and in the database." Style="{StaticResource TextBoxBody}" Margin="10,5,0,10" HorizontalAlignment="Left" MaxWidth="330" TextWrapping="Wrap" />
             </StackPanel>
             <StackPanel Background="{StaticResource ContentBackgroundBrush}" Orientation="Vertical" Margin="0,10,5,0" Grid.Column="1">

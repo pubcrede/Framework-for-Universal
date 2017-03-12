@@ -13,7 +13,7 @@ mc:Ignorable="d">
             <RowDefinition Height="1*" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
-        <uc:HeaderBar Text="Genesys Framework for Universal and Xamarin" Grid.Row="0" />
+        <uc:HeaderBar Text="Genesys Source for Universal and Xamarin" Grid.Row="0" />
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <uc:HamburgerMenu/>
             <StackPanel Margin="0,10,0,0">
