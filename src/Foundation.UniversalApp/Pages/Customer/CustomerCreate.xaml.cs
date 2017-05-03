@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="CustomerCreate.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -17,9 +18,10 @@
 // </copyright>
 //-----------------------------------------------------------------------
 using Foundation.Entity;
-using Foundation.UserControls;
-using Foundation.ViewModels;
 using Genesys.Extensions;
+using Genesys.Foundation.Application;
+using Genesys.Foundation.Pages;
+using Genesys.Foundation.UserControls;
 using Genesys.Foundation.Worker;
 using System;
 using System.Threading.Tasks;
@@ -45,7 +47,7 @@ namespace Foundation.Pages
         /// <summary>
         /// ViewModel holds model and is responsible for server calls, navigation, etc.
         /// </summary>
-        public SaveableViewModel<CustomerModel> MyViewModel { get; } = new SaveableViewModel<CustomerModel>("Customer");
+        public UniversalViewModel<CustomerModel> MyViewModel { get; }
 
         /// <summary>
         /// Page and controls have been loaded
@@ -73,13 +75,14 @@ namespace Foundation.Pages
         /// </summary>
         public CustomerCreate()
         {
-            InitializeComponent();
+            InitializeComponent();            
             TextFirstName.LostFocus += TextAll_LostFocus;
             TextLastName.LostFocus += TextAll_LostFocus;
             TextFirstName.KeyDown += MapEnterKey;
             TextLastName.KeyDown += MapEnterKey;
             TextBirthDate.KeyDown += MapEnterKey;
             DropDownGender.KeyDown += MapEnterKey;
+            MyViewModel = new UniversalViewModel<CustomerModel>(ControllerName);
         }
 
         /// <summary>
@@ -98,15 +101,15 @@ namespace Foundation.Pages
         /// <param name="modelData"></param>
         protected override void BindModel(object modelData)
         {
-            MyViewModel.Model = modelData.DirectCastSafe<CustomerModel>();
-            if (MyViewModel.Model.BirthDate == TypeExtension.DefaultDate) MyViewModel.Model.BirthDate = DateTime.UtcNow.AddYears(-20);
-            DataContext = MyViewModel.Model;
-            SetBinding(ref this.TextID, MyViewModel.Model.ID.ToString(), "ID");
-            SetBinding(ref this.TextKey, MyViewModel.Model.Key.ToString(), "Key");
-            SetBinding(ref this.TextFirstName, MyViewModel.Model.FirstName, "FirstName");
-            SetBinding(ref this.TextLastName, MyViewModel.Model.LastName, "LastName");
-            SetBinding(ref this.TextBirthDate, MyViewModel.Model.BirthDate, "BirthDate");
-            SetBinding(ref this.DropDownGender, MyViewModel.Model.GenderSelections(), MyViewModel.Model.GenderID, "GenderID");
+            MyViewModel.MyModel = modelData.DirectCastSafe<CustomerModel>();
+            if (MyViewModel.MyModel.BirthDate == TypeExtension.DefaultDate) MyViewModel.MyModel.BirthDate = DateTime.UtcNow.AddYears(-20);
+            DataContext = MyViewModel.MyModel;
+            SetBinding(ref this.TextID, MyViewModel.MyModel.ID.ToString(), "ID");
+            SetBinding(ref this.TextKey, MyViewModel.MyModel.Key.ToString(), "Key");
+            SetBinding(ref this.TextFirstName, MyViewModel.MyModel.FirstName, "FirstName");
+            SetBinding(ref this.TextLastName, MyViewModel.MyModel.LastName, "LastName");
+            SetBinding(ref this.TextBirthDate, MyViewModel.MyModel.BirthDate, "BirthDate");
+            SetBinding(ref this.DropDownGender, MyViewModel.MyModel.GenderSelections(), MyViewModel.MyModel.GenderID, "GenderID");
         }
 
         /// <summary>
@@ -126,9 +129,9 @@ namespace Foundation.Pages
         {
             var returnValue = new WorkerResult();
 
-            MyViewModel.Model = await MyViewModel.Create(MyViewModel.Model);
-            BindModel(MyViewModel.Model);
-            if (MyViewModel.Model.ID == TypeExtension.DefaultInteger)
+            MyViewModel.MyModel = await MyViewModel.CreateAsync();
+            BindModel(MyViewModel.MyModel);
+            if (MyViewModel.MyModel.ID == TypeExtension.DefaultInteger)
             {
                 returnValue.FailedRules.Add("1025", "Failed to create");
             }

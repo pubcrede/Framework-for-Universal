@@ -18,16 +18,16 @@
 // </copyright>
 //-----------------------------------------------------------------------
 using Foundation.Entity;
-using Foundation.UserControls;
-using Foundation.ViewModels;
 using Genesys.Extensions;
+using Genesys.Foundation.Application;
+using Genesys.Foundation.Pages;
+using Genesys.Foundation.UserControls;
 using Genesys.Foundation.Worker;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
 
 namespace Foundation.Pages
 {
@@ -49,7 +49,7 @@ namespace Foundation.Pages
         /// <summary>
         /// ViewModel holds model and is responsible for server calls, navigation, etc.
         /// </summary>
-        public SaveableViewModel<CustomerSearchModel> MyViewModel { get; } = new SaveableViewModel<CustomerSearchModel>("CustomerSearch");
+        public UniversalViewModel<CustomerSearchModel> MyViewModel { get; }
 
         /// <summary>
         /// Page and controls have been loaded
@@ -70,7 +70,7 @@ namespace Foundation.Pages
             TextID.KeyDown += MapEnterKey;
             TextFirstName.KeyDown += MapEnterKey;
             TextLastName.KeyDown += MapEnterKey;
-            //ListResults.ItemClick += ListView_ItemClick;
+            MyViewModel = new UniversalViewModel<CustomerSearchModel>(ControllerName);
         }
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace Foundation.Pages
         /// <param name="e">Event args</param>
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int id = e.ClickedItem.DirectCastSafe<CustomerModel>().ID;
-            MyViewModel.Navigate(typeof(CustomerSummary), id);
+            var model = e.ClickedItem.DirectCastSafe<CustomerSearchModel>();
+            MyViewModel.Navigate(typeof(CustomerSummary), model);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Foundation.Pages
         /// <param name="e">Event arguments</param>
         protected override void Page_ModelReceived(object sender, NewModelReceivedEventArgs e)
         {
-            BindModel(MyViewModel.Model = new CustomerSearchModel());
+            BindModel(MyViewModel.MyModel = new CustomerSearchModel());
         }
 
         /// <summary>
@@ -100,11 +100,11 @@ namespace Foundation.Pages
         /// <param name="modelData"></param>
         protected override void BindModel(object modelData)
         {
-            MyViewModel.Model = modelData.DirectCastSafe<CustomerSearchModel>();
-            DataContext = MyViewModel.Model;
-            //SetBinding(ref this.TextID, MyViewModel.Model.ID.ToString(), "ID");
-            SetBinding(ref this.TextFirstName, MyViewModel.Model.FirstName, "FirstName");
-            SetBinding(ref this.TextLastName, MyViewModel.Model.LastName, "LastName");
+            MyViewModel.MyModel = modelData.DirectCastSafe<CustomerSearchModel>();
+            DataContext = MyViewModel.MyModel;
+            SetBinding(ref this.TextID, MyViewModel.MyModel.ID.ToString().Replace(TypeExtension.DefaultInteger.ToString(), ""), "ID");
+            SetBinding(ref this.TextFirstName, MyViewModel.MyModel.FirstName, "FirstName");
+            SetBinding(ref this.TextLastName, MyViewModel.MyModel.LastName, "LastName");
         }
 
         /// <summary>
@@ -125,10 +125,11 @@ namespace Foundation.Pages
         public override async Task<WorkerResult> Process(object sender, RoutedEventArgs e)
         {
             var returnValue = new WorkerResult();
-            string searchUri = String.Format("{0}/{1}/{2}?firstName={3}&lastName={4}", this.MyApplication.MyWebService, "CustomerSearch", MyViewModel.Model.ID, MyViewModel.Model.FirstName, MyViewModel.Model.LastName);
-            BindModel(await MyViewModel.SendGetAsync<CustomerSearchModel>(searchUri));
-            this.ListResults.ItemsSource = MyViewModel.Model.Results;
-            if (this.MyViewModel.Model.Results.Count > 0)
+            var searchUri = new Uri(MyApplication.MyWebService.ToString().AddLast("/") + "CustomerSearch");
+
+            BindModel(await MyViewModel.Sender.SendPostAsync<CustomerSearchModel>(searchUri, MyViewModel.MyModel));
+            this.ListResults.ItemsSource = MyViewModel.MyModel.Results;
+            if (MyViewModel.MyModel.Results.Count > 0)
             {
                 OkCancel.TextResultMessage = "Customer matches listed below";
                 this.StackResults.Visibility = Visibility.Visible;
@@ -137,7 +138,7 @@ namespace Foundation.Pages
                 OkCancel.TextResultMessage = "No results found";
                 this.StackResults.Visibility = Visibility.Collapsed;
             }
-            returnValue.ReturnData = this.MyViewModel.Model.Serialize();
+            returnValue.ReturnData = MyViewModel.MyModel.Serialize();
             return returnValue;
         }
 

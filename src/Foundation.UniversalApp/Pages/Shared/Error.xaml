@@ -1,7 +1,7 @@
 ﻿<p:ReadOnlyPage
-    x:Class="Foundation.Pages.Error"
-    xmlns:p="using:Foundation.Pages"
-    xmlns:uc="using:Foundation.UserControls"
+    x:Class="Genesys.Foundation.Pages.Error"
+    xmlns:p="using:Genesys.Foundation.Pages"
+    xmlns:uc="using:Genesys.Foundation.UserControls"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

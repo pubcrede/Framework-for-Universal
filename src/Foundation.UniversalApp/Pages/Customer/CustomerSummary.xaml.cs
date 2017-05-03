@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="CustomerSummary.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -17,15 +18,14 @@
 // </copyright>
 //-----------------------------------------------------------------------
 using Foundation.Entity;
-using Foundation.UserControls;
-using Foundation.ViewModels;
 using Genesys.Extensions;
+using Genesys.Foundation.Application;
+using Genesys.Foundation.Pages;
+using Genesys.Foundation.UserControls;
 using Genesys.Foundation.Worker;
 using System;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
 
 namespace Foundation.Pages
 {
@@ -47,7 +47,7 @@ namespace Foundation.Pages
         /// <summary>
         /// ViewModel holds model and is responsible for server calls, navigation, etc.
         /// </summary>
-        public SaveableViewModel<CustomerModel> MyViewModel { get; } = new SaveableViewModel<CustomerModel>("Customer");
+        public UniversalViewModel<CustomerModel> MyViewModel { get; }
 
         /// <summary>
         /// Link actual XAML buttons to base class
@@ -88,6 +88,7 @@ namespace Foundation.Pages
             InitializeComponent();
             TextFirstName.LostFocus += TextAll_LostFocus;
             TextLastName.LostFocus += TextAll_LostFocus;
+            MyViewModel = new UniversalViewModel<CustomerModel>(ControllerName);
         }
 
         /// <summary>
@@ -98,7 +99,7 @@ namespace Foundation.Pages
         protected override async void Page_ModelReceived(object sender, NewModelReceivedEventArgs e)
         {
             this.OkCancel.StartProcessing("Loading data...");
-            CustomerModel model = await MyViewModel.GetByID(e.NewModelData.ToString().TryParseInt32());
+            CustomerModel model = await MyViewModel.Get(e.NewModelData.ToString().TryParseInt32());
             BindModel(model);
             this.OkCancel.StopProcessing("");
         }
@@ -109,14 +110,14 @@ namespace Foundation.Pages
         /// <param name="modelData"></param>
         protected override void BindModel(object modelData)
         {
-            MyViewModel.Model = modelData.DirectCastSafe<CustomerModel>();
-            DataContext = MyViewModel.Model;
-            SetBinding(ref this.TextID, MyViewModel.Model.ID.ToString(), "ID");
-            SetBinding(ref this.TextKey, MyViewModel.Model.Key.ToString(), "Key");
-            SetBinding(ref this.TextFirstName, MyViewModel.Model.FirstName, "FirstName");
-            SetBinding(ref this.TextLastName, MyViewModel.Model.LastName, "LastName");
-            SetBinding(ref this.TextBirthDate, MyViewModel.Model.BirthDate.ToString(), "BirthDate");
-            this.TextGender.Text = MyViewModel.Model.GenderSelections().Find(x => x.Key == MyViewModel.Model.GenderID).Value;
+            MyViewModel.MyModel = modelData.DirectCastSafe<CustomerModel>();
+            DataContext = MyViewModel.MyModel;
+            SetBinding(ref this.TextID, MyViewModel.MyModel.ID.ToString(), "ID");
+            SetBinding(ref this.TextKey, MyViewModel.MyModel.Key.ToString(), "Key");
+            SetBinding(ref this.TextFirstName, MyViewModel.MyModel.FirstName, "FirstName");
+            SetBinding(ref this.TextLastName, MyViewModel.MyModel.LastName, "LastName");
+            SetBinding(ref this.TextBirthDate, MyViewModel.MyModel.BirthDate.ToString(), "BirthDate");
+            this.TextGender.Text = MyViewModel.MyModel.GenderSelections().Find(x => x.Key == MyViewModel.MyModel.GenderID).Value;
         }
         
         /// <summary>
@@ -125,7 +126,7 @@ namespace Foundation.Pages
         public override async Task<WorkerResult> Process(object sender, RoutedEventArgs e)
         {
             await Task.Delay(1);
-            MyViewModel.Navigate(typeof(CustomerEdit), MyViewModel.Model.ID);
+            MyViewModel.Navigate(typeof(CustomerEdit), MyViewModel.MyModel);
             return new WorkerResult();
         }
 
@@ -136,7 +137,7 @@ namespace Foundation.Pages
         /// <param name="e">Event arguments</param>
         public override void Cancel(object sender, RoutedEventArgs e)
         {
-            MyViewModel.Navigate(typeof(CustomerDelete), MyViewModel.Model.ID);
+            MyViewModel.Navigate(typeof(CustomerDelete), MyViewModel.MyModel);
         }        
     }
 }

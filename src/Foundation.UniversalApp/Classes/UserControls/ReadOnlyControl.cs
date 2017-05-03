@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="ReadOnlyControl.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -17,13 +18,9 @@
 // </copyright>
 //-----------------------------------------------------------------------
 using Foundation.Applications;
-using Genesys.Extensions;
-using Genesys.Extras.Collections;
 using System;
-using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
 
 namespace Foundation.UserControls
 {

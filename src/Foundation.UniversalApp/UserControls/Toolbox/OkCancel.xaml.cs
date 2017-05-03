@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="OkCancel.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -16,13 +17,13 @@
 //       limitations under the License. 
 // </copyright>
 //-----------------------------------------------------------------------
-using System;
-
-using Windows.UI.Xaml.Controls;
 using Genesys.Foundation.Worker;
+using System;
+using System.Diagnostics.CodeAnalysis;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
-namespace Foundation.UserControls
+namespace Genesys.Foundation.UserControls
 {
     /// <summary>
     /// OK and cancel buttons
@@ -39,6 +40,7 @@ namespace Foundation.UserControls
         /// <summary>
         /// OnOKClickedEventHandler
         /// </summary>
+        [SuppressMessage("Microsoft.Design", "CA1009:DeclareEventHandlersCorrectly")]
         public event OnOKClickedEventHandler OnOKClicked;
 
         /// <summary>
@@ -51,6 +53,7 @@ namespace Foundation.UserControls
         /// <summary>
         /// OnCancelClickedEventHandler
         /// </summary>
+        [SuppressMessage("Microsoft.Design", "CA1009:DeclareEventHandlersCorrectly")]
         public event OnCancelClickedEventHandler OnCancelClicked;
 
         /// <summary>

@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="HeaderBar.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -21,7 +22,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
-namespace Foundation.UserControls
+namespace Genesys.Foundation.UserControls
 {
     /// <summary>
     /// Top bar with title and back button

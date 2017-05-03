@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="ReadOnlyPage.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -18,9 +19,12 @@
 //-----------------------------------------------------------------------
 using Foundation.Applications;
 using Genesys.Extensions;
+using Genesys.Extras.Collections;
 using System;
+using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Navigation;
 
 namespace Foundation.Pages
@@ -77,7 +81,7 @@ namespace Foundation.Pages
         /// <summary>
         /// Uri to currently active frame/page
         /// </summary>
-        public Type CurrentSource { get { return MyApplication.RootFrame.SourcePageType; } }
+        public Type CurrentPage { get { return MyApplication.CurrentPage; } }
 
         /// <summary>
         /// Throws Exception if any UI elements overrun their text max length
@@ -98,13 +102,13 @@ namespace Foundation.Pages
         }
 
         /// <summary>
-        /// Binds all model data to the screen controls and sets MyViewModel.Model property
+        /// Binds all model data to the screen controls and sets MyViewModel.MyModel property
         /// </summary>
         /// <param name="modelData">Model data to bind</param>
         protected abstract void BindModel(object modelData);
 
         /// <summary>
-        /// Binds all model data to the screen controls and sets MyViewModel.Model property
+        /// Binds all model data to the screen controls and sets MyViewModel.MyModel property
         /// </summary>
         /// <param name="sender">Sender of event</param>
         /// <param name="e">Event arguments</param>
@@ -154,6 +158,134 @@ namespace Foundation.Pages
         /// <param name="e"></param>
         protected void BasePage_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+        }
+
+        /// <summary>
+        /// Binds a string to a Image
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref Image item, string bindingProperty)
+        {
+            item.SetBinding(Image.SourceProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.OneWay });
+        }
+
+        /// <summary>
+        /// Binds a string to a TextBlock
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="initialValue"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref TextBlock item, string initialValue, string bindingProperty)
+        {
+            item.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.OneWay });
+        }
+
+        /// <summary>
+        /// Binds a string to a TextBox
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="initialValue"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref TextBox item, string initialValue, string bindingProperty)
+        {
+            // Handle for no state
+            initialValue = initialValue.Replace(TypeExtension.DefaultInteger.ToString(), "")
+                .Replace(TypeExtension.DefaultGuid.ToString(), "").Replace(TypeExtension.DefaultDate.ToString(), "");
+            item.SetBinding(TextBox.TextProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
+        }
+
+        /// <summary>
+        /// Binds a string to a TextBox
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="initialValue"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref TextBox item, DateTime initialValue, string bindingProperty)
+        {
+            item.SetBinding(TextBox.TextProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
+        }
+
+        /// <summary>
+        /// Binds a string to a PasswordBox
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="initialValue"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref PasswordBox item, string initialValue, string bindingProperty)
+        {
+            item.SetBinding(PasswordBox.PasswordCharProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
+        }
+
+        /// <summary>
+        /// Binds a string to a DatePicker
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="initialValue"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref DatePicker item, DateTime initialValue, string bindingProperty)
+        {
+            item.SetBinding(DatePicker.DateProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
+        }
+
+        /// <summary>
+        /// Binds a standard key-value pair to a ComboBox
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="collection"></param>
+        /// <param name="selectedKey"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref ComboBox item, List<KeyValuePair<int, string>> collection, int selectedKey, string bindingProperty)
+        {
+            item.ItemsSource = collection;
+            item.DisplayMemberPath = "Value";
+            item.SelectedValuePath = "Key";
+            item.SetBinding(ComboBox.SelectedValueProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
+            // Handle for no state
+            if (collection.Count == 1)
+            {
+                selectedKey = TypeExtension.DefaultInteger;
+            }
+            item.SelectedValue = selectedKey;
+        }
+
+        /// <summary>
+        /// Binds a standard key-value pair to a ComboBox
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="collection"></param>
+        /// <param name="selectedKey"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref ComboBox item, List<KeyValuePair<Guid, string>> collection, int selectedKey, string bindingProperty)
+        {
+            item.ItemsSource = collection;
+            item.DisplayMemberPath = "Value";
+            item.SelectedValuePath = "Key";
+            item.SetBinding(ComboBox.SelectedValueProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
+            // Handle for no state
+            if (collection.Count == 1)
+            {
+                selectedKey = TypeExtension.DefaultInteger;
+            }
+            item.SelectedValue = selectedKey;
+        }
+
+        /// <summary>
+        /// Binds a standard key-value pair to a ComboBox
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="collection"></param>
+        /// <param name="selectedKey"></param>
+        /// <param name="bindingProperty"></param>
+        public void SetBinding(ref ComboBox item, KeyValueListString collection, string selectedKey, string bindingProperty)
+        {
+            item.ItemsSource = collection;
+            item.DisplayMemberPath = "Value";
+            item.SelectedValuePath = "Key";
+            item.SetBinding(ComboBox.SelectedValueProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
+            // Handle for no state
+            if (collection.Count == 1) { selectedKey = collection.FirstOrDefaultSafe().Key; }
+            item.SelectedValue = selectedKey;
         }
     }
 }

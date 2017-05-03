@@ -1,5 +1,6 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="MainPage.xaml.cs" company="Genesys Source">
+//-----------------------------------------------------------------------
+// <copyright file="Appaml.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -16,11 +17,10 @@
 //       limitations under the License. 
 // </copyright>
 //-----------------------------------------------------------------------
-using Foundation.Applications;
-using Foundation.Pages;
-using Foundation.Themes;
+using Genesys.Foundation.Application;
+using Genesys.Foundation.Pages;
+using Genesys.Foundation.Themes;
 using System;
-using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -36,7 +36,7 @@ namespace Foundation.UniversalApp
         /// <summary>
         /// Entry point Screen (Typically login screen)
         /// </summary>
-        public override Type LandingPage { get; } = typeof(MainPage);
+        public override Type StartupPage { get; } = typeof(MainPage);
 
         /// <summary>
         /// Home dashboard screen
@@ -49,21 +49,13 @@ namespace Foundation.UniversalApp
         public override Type ErrorPage { get; } = typeof(Error);
 
         /// <summary>
-        /// Initialize the application, and wake up web services
-        /// </summary>
-        /// <returns></returns>
-        protected override async Task InitializeAsync()
-        {
-            await base.InitializeAsync(true);
-        }
-        /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            InitializeComponent();
+            Suspending += OnSuspending;
         }
 
         /// <summary>
@@ -76,7 +68,7 @@ namespace Foundation.UniversalApp
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
             var rootFrame = Window.Current.Content as GenericLayout;

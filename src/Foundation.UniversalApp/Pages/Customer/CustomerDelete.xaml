@@ -1,8 +1,8 @@
 ﻿<p:SaveablePage
     x:Class="Foundation.Pages.CustomerDelete"
-    xmlns:t="using:Foundation.Themes"
-    xmlns:p="using:Foundation.Pages"    
-    xmlns:uc="using:Foundation.UserControls"
+    xmlns:t="using:Genesys.Foundation.Themes"
+    xmlns:p="using:Genesys.Foundation.Pages"    
+    xmlns:uc="using:Genesys.Foundation.UserControls"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

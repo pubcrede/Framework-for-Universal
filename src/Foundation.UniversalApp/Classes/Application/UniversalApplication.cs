@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="UniversalApplication.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -20,6 +21,7 @@ using Foundation.Themes;
 using Genesys.Extensions;
 using Genesys.Extras.Configuration;
 using Genesys.Extras.Net;
+using Genesys.Foundation.Application;
 using System;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
@@ -30,17 +32,17 @@ namespace Foundation.Applications
     /// <summary>
     /// Global application information
     /// </summary>
-    public abstract class UniversalApplication : Windows.UI.Xaml.Application
+    public abstract class UniversalApplication : Windows.UI.Xaml.Application, IUniversalApplication
     {
         /// <summary>
         /// Configuration data, XML .config style
         /// </summary>
-        public ConfigurationManagerSafe Configuration { get; protected set; } = new ConfigurationManagerSafe();
+        public IConfigurationManager ConfigurationManager { get; protected set; } = new ConfigurationManagerSafe();
 
         /// <summary>
         /// MyWebService
         /// </summary>
-        public virtual Uri MyWebService { get { return new Uri(this.Configuration.AppSettingValue("MyWebService"), UriKind.RelativeOrAbsolute); } }
+        public virtual Uri MyWebService { get { return new Uri(this.ConfigurationManager.AppSettingValue("MyWebService"), UriKind.RelativeOrAbsolute); } }
 
         /// <summary>
         /// Entry point Screen (Typically login screen)
@@ -69,12 +71,39 @@ namespace Foundation.Applications
         }
 
         /// <summary>
+        /// Returns currently active page type
+        /// </summary>
+        public Type CurrentPage
+        {
+            get
+            {
+                return UniversalApplication.Current.GetType(); ;
+            }
+        }
+
+        /// <summary>
+        /// Returns currently active page type
+        /// </summary>
+        public Frame CurrentFrame
+        {
+            get
+            {
+                return (Frame)Window.Current.Content;
+            }
+        }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         public UniversalApplication() : base()
         {
             InitializeAsync();
         }
+
+        /// <summary>
+        /// Init all locally stored data
+        /// </summary>
+        public abstract Task InitializeAsync();
 
         /// <summary>
         /// Initializes this class with data, and allows for proper async behavior
@@ -90,7 +119,7 @@ namespace Foundation.Applications
         /// Loads config data
         /// </summary>
         /// <returns></returns>
-        private async Task LoadConfigAsync()
+        public async Task LoadConfigAsync()
         {
             var localFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
             localFolder = await localFolder.GetFolderAsync("App_Data");
@@ -98,7 +127,7 @@ namespace Foundation.Applications
             var appSettingsStream = await Windows.Storage.FileIO.ReadTextAsync(appSettingsFile);
             var connectStringsFile = await localFolder.GetFileAsync("ConnectionStrings.config");
             var connectStringsStream = await Windows.Storage.FileIO.ReadTextAsync(connectStringsFile);
-            Configuration = new ConfigurationManagerSafe(appSettingsStream, connectStringsStream);
+            ConfigurationManager = new ConfigurationManagerSafe(appSettingsStream, connectStringsStream);
         }
 
         /// <summary>
@@ -107,18 +136,13 @@ namespace Foundation.Applications
         /// <returns></returns>
         public virtual async Task WakeServicesAsync()
         {
-            if (this.MyWebService.ToString() == TypeExtension.DefaultString)
+            if (MyWebService.ToString() == TypeExtension.DefaultString)
             {
-                HttpRequestGetString Request = new HttpRequestGetString(this.MyWebService.ToString());
+                HttpRequestGetString Request = new HttpRequestGetString(MyWebService.ToString());
                 Request.ThrowExceptionWithEmptyReponse = false;
                 await Request.SendAsync();
             }
         }
-
-        /// <summary>
-        /// Init all locally stored data
-        /// </summary>
-        protected abstract Task InitializeAsync();
 
         /// <summary>
         /// Gets the root frame of the application
@@ -134,13 +158,47 @@ namespace Foundation.Applications
                 {
                     masterLayout = (GenericLayout)Current.Content;
                     returnValue = masterLayout.ContentFrame;
-                }
-                else if(Current.Content is Frame)
+                } else if (Current.Content is Frame)
                 {
                     returnValue = (Frame)Current.Content;
-                }                
+                }
                 return returnValue;
             }
         }
+
+        /// <summary>
+        /// Can this screen go back
+        /// </summary>
+        public bool CanGoBack { get { return RootFrame.CanGoBack; } }
+
+        /// <summary>
+        /// Can this screen go forward
+        /// </summary>
+        public bool CanGoForward { get { return RootFrame.CanGoForward; } }
+
+        /// <summary>
+        /// Navigates back to previous screen
+        /// </summary>
+        public void GoBack() { RootFrame.GoBack(); }
+
+        /// <summary>
+        /// Navigates forward to next screen
+        /// </summary>
+        public void GoForward() { RootFrame.GoForward(); }
+
+        /// <summary>
+        /// Navigates to a page via type.
+        /// Typically in Universal apps
+        /// </summary>
+        /// <param name="destination">Destination page Uri</param>
+        public bool Navigate(Type destinationPageType) { return RootFrame.Navigate(destinationPageType); }
+
+        /// <summary>
+        /// Navigates to a page via type.
+        /// Typically in Universal apps
+        /// </summary>
+        /// <param name="destination">Destination page Uri</param>
+        /// <param name="dataToPass">Data to be passed to the destination page</param>
+        public bool Navigate<TModel>(Type destinationPageType, TModel dataToPass) { return RootFrame.Navigate(destinationPageType, dataToPass); }
     }
 }

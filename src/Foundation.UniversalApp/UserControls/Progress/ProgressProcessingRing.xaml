@@ -1,6 +1,6 @@
 ﻿ <uc:ReadOnlyControl
-    x:Class="Foundation.UserControls.ProgressProcessingRing"
-    xmlns:uc="using:Foundation.UserControls"
+    x:Class="Genesys.Foundation.UserControls.ProgressProcessingRing"
+    xmlns:uc="using:Genesys.Foundation.UserControls"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"

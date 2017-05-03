@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="Error.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -21,7 +22,7 @@ using Genesys.Extensions;
 using System;
 using Windows.UI.Xaml;
 
-namespace Foundation.Pages
+namespace Genesys.Foundation.Pages
 {
     /// <summary>
     /// Global error Screen

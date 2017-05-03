@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="HamburgerMenu.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -16,27 +17,16 @@
 //       limitations under the License. 
 // </copyright>
 //-----------------------------------------------------------------------
-using Foundation.Pages;
-using Foundation.ViewModels;
-using Genesys.Extensions;
-using System;
-using System.Collections.Generic;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
+using Foundation.Pages;
 
-namespace Foundation.UserControls
+namespace Genesys.Foundation.UserControls
 {
     /// <summary>
     /// Interaction logic for HamburgerMenu.xaml
     /// </summary>
     public partial class HamburgerMenu : ReadOnlyControl
     {
-        /// <summary>
-        /// ViewModel holds model and is responsible for server calls, navigation, etc.
-        /// </summary>
-        public ReadOnlyViewModel<List<string>> MyViewModel { get; } = new ReadOnlyViewModel<List<string>>();
-
         /// <summary>
         /// Constructor
         /// </summary>
@@ -71,7 +61,7 @@ namespace Foundation.UserControls
         /// <param name="e">Event arguments</param>
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            MyViewModel.Navigate(MyApplication.HomePage);
+            MyApplication.Navigate(MyApplication.HomePage);
         }
 
         /// <summary>
@@ -81,7 +71,7 @@ namespace Foundation.UserControls
         /// <param name="e">Event arguments</param>
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            MyViewModel.Navigate(typeof(CustomerSearch));
+            MyApplication.Navigate(typeof(CustomerSearch));
         }
 
         /// <summary>

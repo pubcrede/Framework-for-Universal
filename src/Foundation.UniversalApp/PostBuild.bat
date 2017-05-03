@@ -1,11 +1,11 @@
 ECHO OFF
 REM Starting PostBuild.bat
 REM Note: Beware that .bat files in VS have junk characters at beginning that must be removed via Binary Editor.
-REM PostBuildEvent: Call $(ProjectDir)PostBuild.Bat $(TargetDir) $(TargetName)
+REM Usage:Call "$(ProjectDir)PostBuild.Bat" "$(ProjectDir)" "$(OutDir)" "$(TargetPath)" "$(RootNameSpace)"
 REM Common are: $(TargetPath) = output file, $(TargetDir) = full bin path , $(OutDir) = bin\debug
 
 REM Locals
-SET LibFolder=\lib\GenesysFramework
+SET LibFolder=\lib\Foundation
 SET FullPath=%1%2
 SET FullPath=%FullPath:"=%
 SET FullPath="%FullPath%"

@@ -1,5 +1,6 @@
 //-----------------------------------------------------------------------
 // <copyright file="SaveablePage.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -108,132 +109,6 @@ namespace Foundation.Pages
             {
                 OK_Click(sender, e);
             }
-        }
-
-        /// <summary>
-        /// Binds a string to a Image
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref Image item, string bindingProperty)
-        {
-            item.SetBinding(Image.SourceProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.OneWay });
-        }
-
-
-        /// <summary>
-        /// Binds a string to a TextBlock
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="initialValue"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref TextBlock item, string initialValue, string bindingProperty)
-        {
-            item.SetBinding(TextBlock.TextProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.OneWay });
-        }
-
-        /// <summary>
-        /// Binds a string to a TextBox
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="initialValue"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref TextBox item, string initialValue, string bindingProperty)
-        {
-            item.SetBinding(TextBox.TextProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
-        }
-
-        /// <summary>
-        /// Binds a string to a TextBox
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="initialValue"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref TextBox item, DateTime initialValue, string bindingProperty)
-        {
-            item.SetBinding(TextBox.TextProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
-        }
-
-        /// <summary>
-        /// Binds a string to a PasswordBox
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="initialValue"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref PasswordBox item, string initialValue, string bindingProperty)
-        {
-            item.SetBinding(PasswordBox.PasswordCharProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
-        }
-
-        /// <summary>
-        /// Binds a string to a DatePicker
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="initialValue"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref DatePicker item, DateTime initialValue, string bindingProperty)
-        {
-            item.SetBinding(DatePicker.DateProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
-        }
-
-        /// <summary>
-        /// Binds a standard key-value pair to a ComboBox
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="collection"></param>
-        /// <param name="selectedKey"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref ComboBox item, List<KeyValuePair<int, string>> collection, int selectedKey, string bindingProperty)
-        {
-            item.ItemsSource = collection;
-            item.DisplayMemberPath = "Value";
-            item.SelectedValuePath = "Key";
-            item.SetBinding(ComboBox.SelectedValueProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
-            // Handle for no state
-            if (collection.Count == 1)
-            {
-                selectedKey = TypeExtension.DefaultInteger;
-            }
-            item.SelectedValue = selectedKey;
-        }
-
-        /// <summary>
-        /// Binds a standard key-value pair to a ComboBox
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="collection"></param>
-        /// <param name="selectedKey"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref ComboBox item, List<KeyValuePair<Guid, string>> collection, int selectedKey, string bindingProperty)
-        {
-            item.ItemsSource = collection;
-            item.DisplayMemberPath = "Value";
-            item.SelectedValuePath = "Key";
-            item.SetBinding(ComboBox.SelectedValueProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
-            // Handle for no state
-            if (collection.Count == 1)
-            {
-                selectedKey = TypeExtension.DefaultInteger;
-            }
-            item.SelectedValue = selectedKey;
-        }
-
-        /// <summary>
-        /// Binds a standard key-value pair to a ComboBox
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="collection"></param>
-        /// <param name="selectedKey"></param>
-        /// <param name="bindingProperty"></param>
-        public void SetBinding(ref ComboBox item, KeyValueListString collection, string selectedKey, string bindingProperty)
-        {
-            item.ItemsSource = collection;
-            item.DisplayMemberPath = "Value";
-            item.SelectedValuePath = "Key";
-            item.SetBinding(ComboBox.SelectedValueProperty, new Binding() { Path = new PropertyPath(bindingProperty), Mode = BindingMode.TwoWay });
-            // Handle for no state
-            if (collection.Count == 1) { selectedKey = collection.FirstOrDefaultSafe().Key; }
-            item.SelectedValue = selectedKey;
         }
     }
 }

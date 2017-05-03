@@ -1,5 +1,6 @@
-﻿//-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
 // <copyright file="AssemblyInfo.cs" company="Genesys Source">
+//      Copyright (c) 2017 Genesys Source. All rights reserved.
 //      Licensed to the Apache Software Foundation (ASF) under one or more 
 //      contributor license agreements.  See the NOTICE file distributed with 
 //      this work for additional information regarding copyright ownership.
@@ -28,7 +29,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Genesys Source")]
 [assembly: AssemblyProduct("Genesys Framework Foundation Tests")]
-[assembly: AssemblyCopyright("Copyright © 2017 Genesys Source. All rights reserved.")]
+[assembly: AssemblyCopyright("Copyright � 2017 Genesys Source. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

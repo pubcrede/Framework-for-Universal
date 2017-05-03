@@ -36,6 +36,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -109,20 +110,16 @@
     </Content>
     <None Include="Foundation.UniversalApp_StoreKey.pfx" />
     <None Include="Foundation.UniversalApp_TemporaryKey.pfx" />
+    <None Include="PostBuild.bat" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Application\UniversalApplication.cs" />
-    <Compile Include="Classes\Pages\ReadOnlyPage.cs" />
-    <Compile Include="Classes\Pages\SaveablePage.cs" />
-    <Compile Include="Classes\UserControls\ReadOnlyControl.cs" />
-    <Compile Include="Classes\UserControls\SaveableControl.cs" />
-    <Compile Include="Classes\ViewModel\IViewModel.cs" />
-    <Compile Include="Classes\ViewModel\ReadOnlyViewModel.cs" />
-    <Compile Include="Classes\ViewModel\SaveableViewModel.cs" />
+    <Compile Include="Application\IUniversalApplication.cs" />
+    <Compile Include="Application\UniversalApplication.cs" />
+    <Compile Include="Application\UniversalViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -141,6 +138,8 @@
     <Compile Include="Pages\Customer\CustomerSummary.xaml.cs">
       <DependentUpon>CustomerSummary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ReadOnlyPage.cs" />
+    <Compile Include="Pages\SaveablePage.cs" />
     <Compile Include="Pages\Shared\Error.xaml.cs">
       <DependentUpon>Error.xaml</DependentUpon>
     </Compile>
@@ -157,6 +156,8 @@
     <Compile Include="UserControls\Progress\ProgressProcessingRing.xaml.cs">
       <DependentUpon>ProgressProcessingRing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ReadOnlyControl.cs" />
+    <Compile Include="UserControls\SaveableControl.cs" />
     <Compile Include="UserControls\Toolbox\OkCancel.xaml.cs">
       <DependentUpon>OkCancel.xaml</DependentUpon>
     </Compile>
@@ -223,28 +224,28 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Shared\Error.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\GenericLayout.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\Layout\HamburgerMenu.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\Layout\HeaderBar.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\Progress\ProgressProcessingRing.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\Toolbox\OkCancel.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -257,10 +258,14 @@
       <Name>Foundation.Models</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>Call $(ProjectDir)PostBuild.Bat $(ProjectDir) $(OutDir) $(TargetPath) $(RootNameSpace)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
