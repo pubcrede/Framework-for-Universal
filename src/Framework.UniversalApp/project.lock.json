@@ -1,42 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
-    "UAP,Version=v10.0": {
-      "Genesys.Extensions.Core/3.17.8.335": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        }
-      },
-      "Genesys.Framework.Interfaces/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        }
-      },
-      "Genesys.Framework.Models/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        }
-      },
+    "UAP,Version=v10.0.10240": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1922,42 +1887,7 @@
         }
       }
     },
-    "UAP,Version=v10.0/win10-arm": {
-      "Genesys.Extensions.Core/3.17.8.335": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        }
-      },
-      "Genesys.Framework.Interfaces/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        }
-      },
-      "Genesys.Framework.Models/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        }
-      },
+    "UAP,Version=v10.0.10240/win10-arm": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3709,42 +3639,7 @@
         }
       }
     },
-    "UAP,Version=v10.0/win10-arm-aot": {
-      "Genesys.Extensions.Core/3.17.8.335": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        }
-      },
-      "Genesys.Framework.Interfaces/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        }
-      },
-      "Genesys.Framework.Models/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        }
-      },
+    "UAP,Version=v10.0.10240/win10-arm-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -5453,42 +5348,7 @@
         }
       }
     },
-    "UAP,Version=v10.0/win10-x64": {
-      "Genesys.Extensions.Core/3.17.8.335": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        }
-      },
-      "Genesys.Framework.Interfaces/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        }
-      },
-      "Genesys.Framework.Models/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        }
-      },
+    "UAP,Version=v10.0.10240/win10-x64": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -7249,42 +7109,7 @@
         }
       }
     },
-    "UAP,Version=v10.0/win10-x64-aot": {
-      "Genesys.Extensions.Core/3.17.8.335": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        }
-      },
-      "Genesys.Framework.Interfaces/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        }
-      },
-      "Genesys.Framework.Models/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        }
-      },
+    "UAP,Version=v10.0.10240/win10-x64-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -8993,42 +8818,7 @@
         }
       }
     },
-    "UAP,Version=v10.0/win10-x86": {
-      "Genesys.Extensions.Core/3.17.8.335": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        }
-      },
-      "Genesys.Framework.Interfaces/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        }
-      },
-      "Genesys.Framework.Models/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        }
-      },
+    "UAP,Version=v10.0.10240/win10-x86": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -10789,42 +10579,7 @@
         }
       }
     },
-    "UAP,Version=v10.0/win10-x86-aot": {
-      "Genesys.Extensions.Core/3.17.8.335": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll": {},
-          "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll": {}
-        }
-      },
-      "Genesys.Framework.Interfaces/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll": {}
-        }
-      },
-      "Genesys.Framework.Models/3.17.8.359": {
-        "type": "package",
-        "dependencies": {
-          "Genesys.Extensions.Core": "3.0.0"
-        },
-        "compile": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll": {}
-        }
-      },
+    "UAP,Version=v10.0.10240/win10-x86-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -12535,57 +12290,6 @@
     }
   },
   "libraries": {
-    "Genesys.Extensions.Core/3.17.8.335": {
-      "sha512": "+NA+0P96rscOTQDTCtaa9sVNphhGbxpVt7Bmis0rDOL9tW/gC3BbVp9nanvJ+mnqJpF4kxQEBR6zM/pT3ejfUQ==",
-      "type": "package",
-      "path": "genesys.extensions.core/3.17.8.335",
-      "files": [
-        "genesys.extensions.core.3.17.8.335.nupkg.sha512",
-        "genesys.extensions.core.nuspec",
-        "lib/net46/Genesys.Extensions.Core.dll",
-        "lib/net46/Genesys.Extensions.Core.pdb",
-        "lib/net46/Genesys.Extensions.Core.xml",
-        "lib/net46/Genesys.Extras.Core.dll",
-        "lib/net46/Genesys.Extras.Core.pdb",
-        "lib/net46/Genesys.Extras.Core.xml",
-        "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.dll",
-        "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.pdb",
-        "lib/portable-net451+win81+wpa81/Genesys.Extensions.Core.xml",
-        "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.dll",
-        "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.pdb",
-        "lib/portable-net451+win81+wpa81/Genesys.Extras.Core.xml"
-      ]
-    },
-    "Genesys.Framework.Interfaces/3.17.8.359": {
-      "sha512": "0PRoItIpZEIJgNqxRvAPr0kt+SdE55dhBiBoVsK0qFx4XEz+y1Tkb1+MdmI+pieWF32KWbDEhNNI/jPcvpTAHw==",
-      "type": "package",
-      "path": "genesys.framework.interfaces/3.17.8.359",
-      "files": [
-        "genesys.framework.interfaces.3.17.8.359.nupkg.sha512",
-        "genesys.framework.interfaces.nuspec",
-        "lib/net46/Genesys.Framework.Interfaces.dll",
-        "lib/net46/Genesys.Framework.Interfaces.pdb",
-        "lib/net46/Genesys.Framework.Interfaces.xml",
-        "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.dll",
-        "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.pdb",
-        "lib/portable-net451+win81+wpa81/Genesys.Framework.Interfaces.xml"
-      ]
-    },
-    "Genesys.Framework.Models/3.17.8.359": {
-      "sha512": "emikdJ0fuCrCrVmOYsgpBXZo2S754L9wLEScMbwqJU6Gek1u6deaUez3HYpVLNcJFukSAacyLu9zIEr1D3pvCA==",
-      "type": "package",
-      "path": "genesys.framework.models/3.17.8.359",
-      "files": [
-        "genesys.framework.models.3.17.8.359.nupkg.sha512",
-        "genesys.framework.models.nuspec",
-        "lib/net46/Genesys.Framework.Models.dll",
-        "lib/net46/Genesys.Framework.Models.pdb",
-        "lib/net46/Genesys.Framework.Models.xml",
-        "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.dll",
-        "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.pdb",
-        "lib/portable-net451+win81+wpa81/Genesys.Framework.Models.xml"
-      ]
-    },
     "Microsoft.CSharp/4.0.0": {
       "sha512": "oWqeKUxHXdK6dL2CFjgMcaBISbkk+AqEg+yvJHE4DElNzS4QaTsCflgkkqZwVlWby1Dg9zo9n+iCAMFefFdJ/A==",
       "type": "package",
@@ -15974,44 +15678,49 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Genesys.Extensions.Core >= 3.17.8.335",
-      "Genesys.Framework.Interfaces >= 3.17.8.359",
-      "Genesys.Framework.Models >= 3.17.8.359",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.1.0"
     ],
-    "UAP,Version=v10.0": []
+    "UAP,Version=v10.0.10240": []
   },
   "packageFolders": {
-    "C:\\Users\\rjgood\\.nuget\\packages\\": {}
+    "C:\\Users\\LocalAdmin\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
+      "projectUniqueName": "C:\\Repos\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
       "projectName": "Framework.UniversalApp",
-      "projectPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
-      "projectJsonPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.UniversalApp\\project.json",
+      "projectPath": "C:\\Repos\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
+      "projectJsonPath": "C:\\Repos\\Framework.UniversalApp\\project.json",
+      "packagesPath": "C:\\Users\\LocalAdmin\\.nuget\\packages\\",
+      "outputPath": "C:\\Repos\\Framework.UniversalApp\\obj\\",
       "projectStyle": "ProjectJson",
+      "configFilePaths": [
+        "C:\\Repos\\.nuget\\NuGet.Config",
+        "C:\\Users\\LocalAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
-        "uap10.0": {
+        "uap10.0.10240": {
           "projectReferences": {
-            "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Interfaces\\Framework.Interfaces.csproj": {
-              "projectPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Interfaces\\Framework.Interfaces.csproj"
+            "C:\\Repos\\Framework.Interfaces\\Framework.Interfaces.csproj": {
+              "projectPath": "C:\\Repos\\Framework.Interfaces\\Framework.Interfaces.csproj"
             },
-            "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Models\\Framework.Models.csproj": {
-              "projectPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Models\\Framework.Models.csproj"
+            "C:\\Repos\\Framework.Models\\Framework.Models.csproj": {
+              "projectPath": "C:\\Repos\\Framework.Models\\Framework.Models.csproj"
             }
           }
         }
       }
     },
     "dependencies": {
-      "Genesys.Extensions.Core": "3.17.8.335",
-      "Genesys.Framework.Interfaces": "3.17.8.359",
-      "Genesys.Framework.Models": "3.17.8.359",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
     },
     "frameworks": {
-      "uap10.0": {}
+      "uap10.0.10240": {}
     },
     "runtimes": {
       "win10-arm": {

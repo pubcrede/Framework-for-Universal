@@ -90,7 +90,7 @@ namespace Framework.Pages
         /// <param name="modelData"></param>
         protected override void BindModel(object modelData)
         {
-            MyViewModel.MyModel = modelData.DirectCastOrFill<CustomerModel>();
+            MyViewModel.MyModel = modelData.CastOrFill<CustomerModel>();
             if (MyViewModel.MyModel.BirthDate == TypeExtension.DefaultDate) MyViewModel.MyModel.BirthDate = DateTime.UtcNow.AddYears(-20);
             DataContext = MyViewModel.MyModel;
             SetBinding(ref this.TextID, MyViewModel.MyModel.ID.ToString(), "ID");

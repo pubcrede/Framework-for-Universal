@@ -5,7 +5,7 @@
   <Properties>
     <DisplayName>Genesys Framework for Universal</DisplayName>
     <PublisherDisplayName>Genesys Source</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\PackageLogo.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
@@ -15,10 +15,11 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Framework.UniversalApp.App">
-      <uap:VisualElements DisplayName="Genesys Source Framework Quick-Start for Universal Apps" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Genesys Source Framework foundation classes power your resuable framework for your .NET Core PCL/libraries, Universal x-platform mobile apps and all .NET Full libraries and apps." BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Genesys Framework for Universal">
+      <uap:VisualElements DisplayName="Genesys Source Framework Quick-Start for Universal Apps" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Genesys Source Framework powers your resuable object framework for your .NET Core PCL/libraries, Universal x-platform mobile apps and all .NET Full libraries and apps." BackgroundColor="#ffffff">
+        <uap:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\BadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Genesys Framework for Universal" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
         </uap:DefaultTile>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#ffffff" />
       </uap:VisualElements>
     </Application>
   </Applications>

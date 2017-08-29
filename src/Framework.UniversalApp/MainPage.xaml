@@ -16,12 +16,12 @@
                 <TextBox Text="II. Set your SQL connection by clicking the Edit button" Style="{StaticResource TextBoxBody}" />
                 <TextBox Text="III. Click Publish and SSDT will publish schema, SPs, views and data to your destination database" Style="{StaticResource TextBoxBody}" />
             </StackPanel>
-            <TextBox Text="Step 2: Set the Framework.Entity (EF) connection strings to your SQL Server by:" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
+            <TextBox Text="Step 2: Double-check your AppSettings.config MyWebService URL:" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Orientation="Vertical" Margin="38,0,0,0">
-                <TextBox Text="I. Open Framework.UniversalApp\App_Data\ConnectionStrings.config" Style="{StaticResource TextBoxBody}" />
-                <TextBox Text="II. Change DatabaseServer.dev.GenesysFramework.com to your SQL Server machine name" Style="{StaticResource TextBoxBody}" />
-                <TextBox Text="III. For SQL Authentication, replace Integrated Security=true with user id=USER; password=PASS;" Style="{StaticResource TextBoxBody}" />
-                <TextBox Text=" Important: Most problems are caused by invalid SQL Connection and/or User" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text="I. Open Framework.UniversalApp\App_Data\AppSettings.config" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text="II. Observe MyWebService. This should be set to the endpoint hosting Framework.WebService" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text=" - Local Debugging: http://localhost:20871/v1" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text=" - Sampler Sandbox: http://Dev-Web-16/Genesys-Framework-for-WebAPI/v1" Style="{StaticResource TextBoxBody}" />
             </StackPanel>
             <TextBox Text="Step 3: Run the Framework.UniversalApp project!" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Margin="38,0,0,10">

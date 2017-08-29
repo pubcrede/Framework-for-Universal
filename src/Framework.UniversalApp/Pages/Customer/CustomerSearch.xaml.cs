@@ -74,7 +74,7 @@ namespace Framework.Pages
         /// <param name="e">Event args. (CustomerSearchModel)e.ClickedItem</param>
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var model = e.ClickedItem.DirectCastOrFill<CustomerSearchModel>();
+            var model = e.ClickedItem.CastOrFill<CustomerSearchModel>();
             MyViewModel.Navigate(typeof(CustomerSummary), model);
         }
 
@@ -94,7 +94,7 @@ namespace Framework.Pages
         /// <param name="modelData"></param>
         protected override void BindModel(object modelData)
         {
-            MyViewModel.MyModel = modelData.DirectCastOrFill<CustomerSearchModel>();
+            MyViewModel.MyModel = modelData.CastOrFill<CustomerSearchModel>();
             DataContext = MyViewModel.MyModel;
             SetBinding(ref this.TextID, MyViewModel.MyModel.ID.ToString().Replace(TypeExtension.DefaultInteger.ToString(), ""), "ID");
             SetBinding(ref this.TextFirstName, MyViewModel.MyModel.FirstName, "FirstName");
