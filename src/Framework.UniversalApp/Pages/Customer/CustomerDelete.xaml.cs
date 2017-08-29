@@ -78,10 +78,10 @@ namespace Framework.Pages
         /// </summary>
         /// <param name="sender">Sender of event</param>
         /// <param name="e">Event arguments</param>
-        protected override async void Page_ModelReceived(object sender, NewModelReceivedEventArgs e)
+        protected override void Page_ModelReceived(object sender, NewModelReceivedEventArgs e)
         {
             OkCancel.StartProcessing("Loading data...");
-            CustomerModel model = await MyViewModel.Get(e.NewModelData.ToString().TryParseInt32());
+            var model = e.NewModelData.CastOrFill<CustomerModel>();
             BindModel(model);
             OkCancel.CancelProcessing();
         }
@@ -92,7 +92,7 @@ namespace Framework.Pages
         /// <param name="modelData"></param>
         protected override void BindModel(object modelData)
         {
-            MyViewModel.MyModel = modelData.DirectCastOrFill<CustomerModel>();
+            MyViewModel.MyModel = modelData.CastOrFill<CustomerModel>();
             DataContext = MyViewModel.MyModel;
             SetBinding(ref this.TextID, MyViewModel.MyModel.ID.ToString(), "ID");
             SetBinding(ref this.TextKey, MyViewModel.MyModel.Key.ToString(), "Key");

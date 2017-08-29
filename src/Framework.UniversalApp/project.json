@@ -1,8 +1,5 @@
 ﻿{
   "dependencies": {
-    "Genesys.Extensions.Core": "3.17.8.335",
-    "Genesys.Framework.Interfaces": "3.17.8.359",
-    "Genesys.Framework.Models": "3.17.8.359",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
   },
   "frameworks": {
