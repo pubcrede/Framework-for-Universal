@@ -6,7 +6,7 @@
 //      without the prior written consent of the copyright owner.
 // </copyright>
 //-----------------------------------------------------------------------
-using Genesys.Framework.UserControls;
+using Framework.UserControls;
 using Genesys.Extensions;
 using Genesys.Extras.Collections;
 using Genesys.Framework.Worker;
@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 
-namespace Genesys.Framework.Pages
+namespace Framework.Pages
 {
     /// <summary>
     /// Screen base for authenticated users

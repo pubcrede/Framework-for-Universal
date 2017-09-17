@@ -11,7 +11,7 @@ using Genesys.Extensions;
 using System;
 using Windows.UI.Xaml;
 
-namespace Genesys.Framework.Pages
+namespace Framework.Pages
 {
     /// <summary>
     /// Global error Screen

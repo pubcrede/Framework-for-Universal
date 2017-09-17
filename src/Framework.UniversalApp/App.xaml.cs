@@ -6,9 +6,9 @@
 //      without the prior written consent of the copyright owner.
 // </copyright>
 //-----------------------------------------------------------------------
-using Genesys.Framework.Application;
-using Genesys.Framework.Pages;
-using Genesys.Framework.Themes;
+using Framework.Application;
+using Framework.Pages;
+using Framework.Themes;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;

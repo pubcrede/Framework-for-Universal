@@ -1,6 +1,6 @@
 ﻿<a:UniversalApplication
     x:Class="Framework.UniversalApp.App"
-    xmlns:a="using:Genesys.Framework.Application"
+    xmlns:a="using:Framework.Application"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Framework.UniversalApp"

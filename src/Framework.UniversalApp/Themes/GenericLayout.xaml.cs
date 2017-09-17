@@ -9,7 +9,7 @@
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace Genesys.Framework.Themes
+namespace Framework.Themes
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

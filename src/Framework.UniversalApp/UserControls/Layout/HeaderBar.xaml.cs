@@ -11,7 +11,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
-namespace Genesys.Framework.UserControls
+namespace Framework.UserControls
 {
     /// <summary>
     /// Top bar with title and back button

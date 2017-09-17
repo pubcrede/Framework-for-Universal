@@ -12,7 +12,7 @@ using System.Diagnostics.CodeAnalysis;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Genesys.Framework.UserControls
+namespace Framework.UserControls
 {
     /// <summary>
     /// OK and cancel buttons

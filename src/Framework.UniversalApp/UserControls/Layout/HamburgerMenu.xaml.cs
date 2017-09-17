@@ -9,7 +9,7 @@
 using Windows.UI.Xaml;
 using Framework.Pages;
 
-namespace Genesys.Framework.UserControls
+namespace Framework.UserControls
 {
     /// <summary>
     /// Interaction logic for HamburgerMenu.xaml

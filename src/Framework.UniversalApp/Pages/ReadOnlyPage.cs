@@ -15,8 +15,9 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Navigation;
+using Framework.Application;
 
-namespace Genesys.Framework.Pages
+namespace Framework.Pages
 {
     /// <summary>
     /// Screen base for authenticated users

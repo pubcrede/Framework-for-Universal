@@ -1,6 +1,6 @@
 ﻿<uc:ReadOnlyControl    
-    x:Class="Genesys.Framework.UserControls.OkCancel"
-    xmlns:uc="using:Genesys.Framework.UserControls"    
+    x:Class="Framework.UserControls.OkCancel"
+    xmlns:uc="using:Framework.UserControls"    
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"    
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
