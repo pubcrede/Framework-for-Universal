@@ -6,12 +6,13 @@
 //      without the prior written consent of the copyright owner.
 // </copyright>
 //-----------------------------------------------------------------------
+using Framework.Application;
 using Genesys.Framework.Application;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Genesys.Framework.UserControls
+namespace Framework.UserControls
 {
     /// <summary>
     /// Common UI functions

@@ -1,8 +1,8 @@
 ﻿<p:SaveablePage
     x:Class="Framework.Pages.CustomerSummary"
-    xmlns:t="using:Genesys.Framework.Themes"
-    xmlns:p="using:Genesys.Framework.Pages"    
-    xmlns:uc="using:Genesys.Framework.UserControls"
+    xmlns:t="using:Framework.Themes"
+    xmlns:p="using:Framework.Pages"    
+    xmlns:uc="using:Framework.UserControls"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

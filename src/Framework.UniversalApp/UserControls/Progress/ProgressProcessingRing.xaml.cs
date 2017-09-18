@@ -10,7 +10,7 @@ using Genesys.Extensions;
 using Genesys.Framework.Worker;
 using Windows.UI.Xaml;
 
-namespace Genesys.Framework.UserControls
+namespace Framework.UserControls
 {
     /// <summary>
     /// ProgressRing element with a processing message, and a separate result message

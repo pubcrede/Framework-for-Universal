@@ -20,8 +20,8 @@
             <StackPanel Orientation="Vertical" Margin="38,0,0,0">
                 <TextBox Text="I. Open Framework.UniversalApp\App_Data\AppSettings.config" Style="{StaticResource TextBoxBody}" />
                 <TextBox Text="II. Observe MyWebService. This should be set to the endpoint hosting Framework.WebService" Style="{StaticResource TextBoxBody}" />
-                <TextBox Text=" - Local Debugging: http://localhost:20871/v1" Style="{StaticResource TextBoxBody}" />
-                <TextBox Text=" - Sampler Sandbox: http://Dev-Web-16/Genesys-Framework-for-WebAPI/v1" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text=" - Local Debugging: http://localhost:30002/v1" Style="{StaticResource TextBoxBody}" />
+                <TextBox Text=" - Sampler Sandbox: http://sampler.genesyssource.com/Genesys-Framework-for-WebAPI/v1" Style="{StaticResource TextBoxBody}" />
             </StackPanel>
             <TextBox Text="Step 3: Run the Framework.UniversalApp project!" Style="{StaticResource TextBoxSubTitle}" Margin="20,0,0,0" />
             <StackPanel Margin="38,0,0,10">

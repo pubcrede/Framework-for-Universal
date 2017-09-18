@@ -1,7 +1,7 @@
 {
-  "version": 3,
+  "version": 2,
   "targets": {
-    "UAP,Version=v10.0.10240": {
+    "UAP,Version=v10.0": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1887,7 +1887,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10240/win10-arm": {
+    "UAP,Version=v10.0/win10-arm": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3639,7 +3639,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10240/win10-arm-aot": {
+    "UAP,Version=v10.0/win10-arm-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -5348,7 +5348,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10240/win10-x64": {
+    "UAP,Version=v10.0/win10-x64": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -7109,7 +7109,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10240/win10-x64-aot": {
+    "UAP,Version=v10.0/win10-x64-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -8818,7 +8818,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10240/win10-x86": {
+    "UAP,Version=v10.0/win10-x86": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -10579,7 +10579,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10240/win10-x86-aot": {
+    "UAP,Version=v10.0/win10-x86-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -15680,37 +15680,26 @@
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.1.0"
     ],
-    "UAP,Version=v10.0.10240": []
+    "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LocalAdmin\\.nuget\\packages\\": {}
+    "C:\\Users\\rjgood\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Repos\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
+      "projectUniqueName": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
       "projectName": "Framework.UniversalApp",
-      "projectPath": "C:\\Repos\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
-      "projectJsonPath": "C:\\Repos\\Framework.UniversalApp\\project.json",
-      "packagesPath": "C:\\Users\\LocalAdmin\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\Framework.UniversalApp\\obj\\",
+      "projectPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
+      "projectJsonPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.UniversalApp\\project.json",
       "projectStyle": "ProjectJson",
-      "configFilePaths": [
-        "C:\\Repos\\.nuget\\NuGet.Config",
-        "C:\\Users\\LocalAdmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-      ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
-        "uap10.0.10240": {
+        "uap10.0": {
           "projectReferences": {
-            "C:\\Repos\\Framework.Interfaces\\Framework.Interfaces.csproj": {
-              "projectPath": "C:\\Repos\\Framework.Interfaces\\Framework.Interfaces.csproj"
+            "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Interfaces\\Framework.Interfaces.csproj": {
+              "projectPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Interfaces\\Framework.Interfaces.csproj"
             },
-            "C:\\Repos\\Framework.Models\\Framework.Models.csproj": {
-              "projectPath": "C:\\Repos\\Framework.Models\\Framework.Models.csproj"
+            "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Models\\Framework.Models.csproj": {
+              "projectPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Models\\Framework.Models.csproj"
             }
           }
         }
@@ -15720,7 +15709,7 @@
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
     },
     "frameworks": {
-      "uap10.0.10240": {}
+      "uap10.0": {}
     },
     "runtimes": {
       "win10-arm": {

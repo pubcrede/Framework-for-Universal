@@ -1,6 +1,6 @@
 ﻿<uc:ReadOnlyControl
-    x:Class="Genesys.Framework.UserControls.HamburgerMenu"
-    xmlns:uc="using:Genesys.Framework.UserControls"
+    x:Class="Framework.UserControls.HamburgerMenu"
+    xmlns:uc="using:Framework.UserControls"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
