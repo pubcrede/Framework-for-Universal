@@ -1,0 +1,53 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top nav-bar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-left">
+                <div class="row logo-container">
+                    <a href="/">
+                        <span class="logo-company">genesys source</span>
+                        <p class="logo-product">Framework for MVC</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="~/@(CustomerSearchController.ControllerName)/@(CustomerSearchController.SearchAction)" alt="@(CustomerSearchController.SearchAction)" data-toggle="collapse" data-target=".in">
+                        <div class="hidden-md hidden-sm">@(CustomerSearchController.SearchActionText)<b class="caret"></b></div>
+                        <span class="glyphicon glyphicon-search visible-md visible-sm"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="~/@(CustomerController.ControllerName)/@(CustomerController.CreateAction)" alt="@(CustomerController.CreateAction)" data-toggle="collapse" data-target=".in">
+                        <div class="hidden-md hidden-sm">@(CustomerController.CreateActionText )<b class="caret"></b></div>
+                        <span class="glyphicon glyphicon-plus-sign visible-md visible-sm"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://docs.GenesysSource.com" alt="Docs" target="_blank" data-toggle="collapse" data-target=".in">
+                        <div class="hidden-md hidden-sm">Docs<b class="caret"></b></div>
+                        <span class="glyphicon glyphicon-question-sign visible-md visible-sm"></span>
+                    </a>
+                </li>
+                <li class="genesys-tile genesys-blue-background">
+                    <div class="row" style="height:70%;"><a href="http://www.genesysstack.com/genesys-framework" alt="" data-toggle="collapse" data-target=".in">
+                        <span class="glyphicon-framework"></span></a></div>
+                    <div class="row" style="height:30%;"><a href="http://www.genesysstack.com/genesys-framework" alt="" data-toggle="collapse" data-target=".in">
+                        <p>Genesys</p><p>Framework</p></a></div>
+                </li>
+                <li class="genesys-tile genesys-green-background">
+                    <div class="row" style="height:70%;"><a href="http://www.genesysstack.com/cloud-dev-environment" alt="" data-toggle="collapse" data-target=".in">
+                        <span class="glyphicon glyphicon-cloud"></span></a></div>
+                    <div class="row" style="height:30%;"><a href="http://www.genesysstack.com/cloud-dev-environment" alt="" data-toggle="collapse" data-target=".in">
+                        <p>Cloud Dev</p><p>Environment</p></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
