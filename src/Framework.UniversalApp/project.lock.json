@@ -15687,19 +15687,19 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
+      "projectUniqueName": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
       "projectName": "Framework.UniversalApp",
-      "projectPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
-      "projectJsonPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.UniversalApp\\project.json",
+      "projectPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.UniversalApp\\Framework.UniversalApp.csproj",
+      "projectJsonPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.UniversalApp\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Interfaces\\Framework.Interfaces.csproj": {
-              "projectPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Interfaces\\Framework.Interfaces.csproj"
+            "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Interfaces\\Framework.Interfaces.csproj": {
+              "projectPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Interfaces\\Framework.Interfaces.csproj"
             },
-            "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Models\\Framework.Models.csproj": {
-              "projectPath": "C:\\Repos\\Framework\\3.00-Alpha\\Templater\\Framework.Models\\Framework.Models.csproj"
+            "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Models\\Framework.Models.csproj": {
+              "projectPath": "C:\\Repos\\Framework\\GitHub\\Framework-for-Universal\\src\\Framework.Models\\Framework.Models.csproj"
             }
           }
         }
